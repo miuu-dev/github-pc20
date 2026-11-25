@@ -1,0 +1,174 @@
+:root {
+    --bg-main: #0f0d18;
+    --bg-surface: #181426;
+    --bg-input: #221c36;
+    --bg-hover: #2a2242;
+    --text-main: #f3effc;
+    --text-muted: #a69bc2;
+    --accent: #9b6dff;
+    --accent-hover: #834ef7;
+    --secondary: #3b3254;
+    --secondary-hover: #4c416b;
+    --danger: #e05275;
+    --danger-hover: #c93b5e;
+    --border: #2f2747;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 2rem;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: "Century Gothic", "Segoe UI", system-ui, sans-serif;
+}
+
+/* Formulario */
+form {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group:last-child {
+    margin-bottom: 0;
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.7rem 0.95rem;
+    background-color: var(--bg-input);
+    color: var(--text-main);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-control::placeholder {
+    color: var(--text-muted);
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(155, 109, 255, 0.25);
+}
+
+/* Botones */
+.btn {
+    display: inline-block;
+    padding: 0.55rem 0.95rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    font-family: inherit;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.btn-primary {
+    background-color: var(--accent);
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-hover);
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+.btn-secondary {
+    background-color: var(--secondary);
+    color: var(--text-main);
+    padding: 0.35rem 0.7rem;
+    font-size: 0.82rem;
+}
+
+.btn-secondary:hover {
+    background-color: var(--secondary-hover);
+}
+
+.btn-danger {
+    background-color: var(--danger);
+    color: #ffffff;
+    padding: 0.35rem 0.7rem;
+    font-size: 0.82rem;
+}
+
+.btn-danger:hover {
+    background-color: var(--danger-hover);
+}
+
+/* Contenedor de tabla */
+.col-md-7 {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.bg-white {
+    background-color: var(--bg-surface) !important;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.table thead {
+    background-color: #241c3b;
+    color: #d8c7ff;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+}
+
+.table th,
+.table td {
+    padding: 0.75rem 0.9rem;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.table-sm th,
+.table-sm td {
+    padding: 0.55rem 0.75rem;
+}
+
+.table-bordered th,
+.table-bordered td {
+    border: 1px solid var(--border);
+}
+
+.table-striped tbody:nth-of-type(odd) tr {
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+.table-hover tbody tr:hover {
+    background-color: var(--bg-hover);
+}

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Recibido</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <form>
+        <h2>Contacto recibido</h2>
+        <p>Se ha guardado a <strong>{{ fullname }}</strong>.</p>
+        <a href="{{ url_for('index') }}" class="btn btn-primary btn-block">Volver</a>
+    </form>
+</body>
+</html>
