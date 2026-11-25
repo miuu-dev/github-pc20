@@ -1,0 +1,71 @@
+# ==========================================
+# Entornos virtuales (incluye el de la guía)
+# ==========================================
+envflask/
+venv/
+.venv/
+env/
+ENV/
+
+# ==========================================
+# Python: caché, compilados y distribución
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# ==========================================
+# Flask y configuración sensible / secretos
+# ==========================================
+instance/
+.webassets-cache
+.env
+.env.*
+*.pem
+*.key
+
+# ==========================================
+# Bases de datos locales y logs
+# ==========================================
+*.sqlite
+*.sqlite3
+*.db
+*.log
+
+# ==========================================
+# Editores e IDEs (VS Code)
+# ==========================================
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*~
+docs/
+
+# ==========================================
+# Sistema operativo (Linux / Windows / macOS)
+# ==========================================
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.Trash-*
