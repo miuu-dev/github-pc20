@@ -59,7 +59,6 @@ instance/
 *.swp
 *.swo
 *~
-docs/
 
 # ==========================================
 # Sistema operativo (Linux / Windows / macOS)
