@@ -1,0 +1,35 @@
+@use '_variables.scss' as v;
+@use '_mixins.scss' as m;
+
+// 4.4. scss/_utilidades.scss 
+%etiqueta-base {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+// etiquetas @each
+@each $nivel, $color in v.$niveles {
+    .etiqueta-dificultad--#{$nivel} {
+        @extend %etiqueta-base;
+        color: $color;
+        background-color: v.$crema;
+    }
+}
+
+// etiquetas @for
+@for $i from 1 through 3 {
+    .espacio-#{$i} {
+        margin-top: $i * v.$unidad;
+    }
+}
+
+// etiquetas @include
+.accion--clara {
+    @include m.accion(v.$acento, v.$bosque);
+}
+
+.accion--oscura {
+    @include m.accion(v.$bosque, v.$acento);
+}

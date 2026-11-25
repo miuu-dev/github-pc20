@@ -1,0 +1,6 @@
+@use "sass:math";
+
+/* EJERCICIO 5: Funciones, @extend y placeholders */
+@function px-a-rem($px, $base: 16px) {
+    @return math.div($px, $base) * 1rem;
+}

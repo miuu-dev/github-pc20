@@ -1,0 +1,21 @@
+// 4.1. scss/_variables - variables y mapa
+
+// Variables
+$bosque: #193d36;
+$verde: #426c50;
+$crema: #f5f3ec;
+$tinta: #24332e;
+$muted: #65736d;
+$linea: #dedfd7;
+$blanco: #fff;
+$acento: #d7e8a2;
+$unidad: 8px;
+$radio: 18px;
+$maximo: 1180px;
+
+// Niveles
+$niveles: (
+    facil: #2d7453,
+    media: #a66b1f,
+    alta: #a44338
+)

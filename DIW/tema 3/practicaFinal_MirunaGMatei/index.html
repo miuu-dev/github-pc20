@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brújula Norte | Explora a tu ritmo</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+  <header class="barra-superior">
+    <div class="envoltura barra-superior__interior">
+      <a class="logotipo" href="#inicio" aria-label="Brújula Norte, inicio"><span class="logotipo__icono">✦</span>
+        Brújula Norte</a>
+      <nav class="navegacion" aria-label="Principal">
+        <a href="#rutas">Rutas</a><a href="#destacada">Destacada</a><a href="#agenda">Agenda</a>
+      </nav>
+      <a class="enlace-acceso" href="#agenda">Próximas salidas <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+  <main id="inicio">
+    <section class="portada envoltura" aria-labelledby="portada-titulo">
+      <div class="portada__contenido">
+        <p class="sobrelinea">CAMINA · DESCUBRE · RESPIRA</p>
+        <h1 id="portada-titulo">La aventura empieza <em>fuera</em>.</h1>
+        <p class="portada__descripcion">Senderos seleccionados para descubrir paisajes extraordinarios, sin prisas y con
+          toda la información que necesitas.</p>
+        <a class="accion accion--clara" href="#rutas">Explorar rutas <span aria-hidden="true">→</span></a>
+        <div class="portada__cifras" aria-label="Datos del portal">
+          <div><strong>24</strong><span>Rutas</span></div>
+          <div><strong>8</strong><span>Comarcas</span></div>
+          <div><strong>4.9</strong><span>Valoración</span></div>
+        </div>
+      </div>
+      <div class="portada__imagen" role="img" aria-label="Paisaje de montañas y bosque al atardecer"></div>
+    </section>
+    <section class="catalogo envoltura" id="rutas" aria-labelledby="catalogo-titulo">
+      <div class="cabecera-seccion">
+        <div>
+          <p class="sobrelinea">ELIGE TU PRÓXIMO DESTINO</p>
+          <h2 id="catalogo-titulo">Rutas para perder la rutina</h2>
+        </div>
+        <p>Explora según tu ritmo, el tiempo disponible y el paisaje que te apetezca.</p>
+      </div>
+      <div class="catalogo__distribucion">
+        <aside class="filtros" aria-label="Filtros orientativos">
+          <h3>Encuentra tu ruta</h3>
+          <fieldset>
+            <legend>Dificultad</legend><label><input type="checkbox" checked> Fácil</label><label><input
+                type="checkbox"> Media</label><label><input type="checkbox"> Alta</label>
+          </fieldset>
+          <fieldset>
+            <legend>Paisaje</legend><label><input type="checkbox" checked> Bosque</label><label><input type="checkbox">
+              Montaña</label><label><input type="checkbox"> Agua</label>
+          </fieldset>
+          <div class="filtros__nota">Consejo: lleva agua y consulta la meteorología antes de salir.</div>
+        </aside>
+        <div class="rutas">
+          <article class="ruta ruta--principal">
+            <div class="ruta__foto ruta__foto--bosque" role="img" aria-label="Sendero entre montañas"></div>
+            <div class="ruta__cuerpo">
+              <div class="ruta__encabezado"><span
+                  class="etiqueta-dificultad etiqueta-dificultad--facil">Fácil</span><span class="ruta__numero">RUTA
+                  01</span></div>
+              <h3>El bosque de las sombras</h3>
+              <p>Un recorrido circular entre pinos, miradores y caminos tranquilos.</p>
+              <ul class="ruta__datos">
+                <li>↗ 8,5 km</li>
+                <li>◷ 2 h 40 min</li>
+                <li>⌁ Circular</li>
+              </ul><a class="ruta__enlace" href="#destacada">Ver recorrido <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+          <article class="ruta">
+            <div class="ruta__foto ruta__foto--lago" role="img" aria-label="Lago de montaña"></div>
+            <div class="ruta__cuerpo">
+              <div class="ruta__encabezado"><span
+                  class="etiqueta-dificultad etiqueta-dificultad--media">Media</span><span class="ruta__numero">RUTA
+                  02</span></div>
+              <h3>La senda del agua</h3>
+              <p>Pasarelas, arroyos y pequeñas cascadas en un paisaje fresco.</p>
+              <ul class="ruta__datos">
+                <li>↗ 12 km</li>
+                <li>◷ 4 h</li>
+                <li>⌁ Lineal</li>
+              </ul><a class="ruta__enlace" href="#destacada">Ver recorrido <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+          <article class="ruta">
+            <div class="ruta__foto ruta__foto--cumbre" role="img" aria-label="Cumbres rocosas"></div>
+            <div class="ruta__cuerpo">
+              <div class="ruta__encabezado"><span class="etiqueta-dificultad etiqueta-dificultad--alta">Alta</span><span
+                  class="ruta__numero">RUTA 03</span></div>
+              <h3>El balcón de las cumbres</h3>
+              <p>Una ascensión exigente con vistas abiertas al valle.</p>
+              <ul class="ruta__datos">
+                <li>↗ 16 km</li>
+                <li>◷ 6 h</li>
+                <li>⌁ Circular</li>
+              </ul><a class="ruta__enlace" href="#destacada">Ver recorrido <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="recomendacion" id="destacada" aria-labelledby="destacada-titulo">
+      <div class="envoltura recomendacion__interior">
+        <div class="recomendacion__visual" role="img" aria-label="Paisaje de bosque y cumbres"></div>
+        <div class="recomendacion__texto">
+          <p class="sobrelinea">NUESTRA SELECCIÓN</p>
+          <h2 id="destacada-titulo">Una pausa en el camino.</h2>
+          <p>Hay lugares que invitan a bajar el ritmo. Descubre una ruta que combina naturaleza, silencio y miradores
+            inolvidables.</p><a class="accion accion--oscura" href="#agenda">Consultar salidas <span
+              aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+    <section class="agenda envoltura" id="agenda" aria-labelledby="agenda-titulo">
+      <div class="cabecera-seccion">
+        <div>
+          <p class="sobrelinea">ANOTA LA FECHA</p>
+          <h2 id="agenda-titulo">Próximas salidas</h2>
+        </div>
+        <p>Actividades orientativas para practicar el diseño de una agenda.</p>
+      </div>
+      <ol class="agenda__lista">
+        <li class="agenda__evento">
+          <div class="agenda__fecha"><strong>08</strong><span>NOV</span></div>
+          <div class="agenda__detalle"><span class="agenda__tipo">BOSQUE</span>
+            <h3>Senderos de otoño</h3>
+            <p>Salida interpretativa · 09:30 · Punto de encuentro por confirmar</p>
+          </div><span class="agenda__flecha" aria-hidden="true">↗</span>
+        </li>
+        <li class="agenda__evento">
+          <div class="agenda__fecha"><strong>15</strong><span>NOV</span></div>
+          <div class="agenda__detalle"><span class="agenda__tipo">MONTAÑA</span>
+            <h3>Miradores al amanecer</h3>
+            <p>Ruta panorámica · 07:45 · Punto de encuentro por confirmar</p>
+          </div><span class="agenda__flecha" aria-hidden="true">↗</span>
+        </li>
+        <li class="agenda__evento">
+          <div class="agenda__fecha"><strong>22</strong><span>NOV</span></div>
+          <div class="agenda__detalle"><span class="agenda__tipo">AGUA</span>
+            <h3>El camino de los arroyos</h3>
+            <p>Paseo entre riberas · 10:00 · Punto de encuentro por confirmar</p>
+          </div><span class="agenda__flecha" aria-hidden="true">↗</span>
+        </li>
+      </ol>
+    </section>
+  </main>
+  <footer class="pie">
+    <div class="envoltura pie__interior"><strong>✦ Brújula Norte</strong></div>
+  </footer>
+</body>
+
+</html>

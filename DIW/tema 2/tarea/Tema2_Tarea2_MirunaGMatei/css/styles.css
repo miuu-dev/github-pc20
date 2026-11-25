@@ -1,0 +1,369 @@
+/* ================
+    AÑADIR FUENTES
+   ================ */
+@font-face {
+    font-family: "CenturyGothic";
+    src: url(../fonts/CenturyGothic.otf);
+}
+
+@font-face {
+    font-family: "MonimerSerif";
+    src: url(../fonts/MonimerSerif.otf);
+}
+
+/* ========================
+    4.1. ESTILOS GENERALES
+   ======================== */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 16px;
+    font-family: "CenturyGothic", Arial, Helvetica, sans-serif;
+    color: black;
+    background-color: #E3E3E3;
+    line-height: 1.2;
+}
+
+
+/* ============================
+    4.2. CABECERA Y NAVEGACIÓN
+   ============================ */
+#cabecera {
+    background-color: rgb(33, 33, 85);
+    text-align: center;
+    padding: 20px 0 0 0; /* así solo hay espacio arriba */
+    color: white;
+}
+
+#cabecera h1 {
+    text-transform: uppercase;
+    font-family: "MonimerSerif", Arial, Helvetica, sans-serif;
+}
+
+#cabecera h1::first-letter {
+    font-size: 1.5em;
+}
+
+#cabecera p {
+    margin: 20px 0; /* solo tiene margen arriba y abajo */
+    font-style: italic;
+    color: gray;
+}
+
+#cabecera nav {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(20, 20, 48);
+    padding: 10px 0;
+}
+
+#cabecera nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+    padding: 8px 16px; 
+    border-radius: 10px; 
+    transition: all ease-in-out 0.20s;
+    
+}
+
+#cabecera nav a:hover {
+    background-color: #DFCCED;
+    color: black;
+}
+
+
+/* ================
+    4.3. PRODUCTOS
+   ================ */
+#productos {
+    margin: 40px;
+    padding: 40px;
+    border: 2px solid lightgray;
+    background-color: whitesmoke;
+}
+
+#productos h2 {
+    font-family: 'MonimerSerif';
+    font-weight: 900;
+    text-transform: uppercase;
+    border-bottom: 2px solid orange;
+    margin-bottom: 12px;
+}
+
+.producto {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #CCCFED;
+    border-left: 4px solid darkblue;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.producto h3, .oferta h3 {
+    font-weight: bold;
+}
+
+.oferta {
+    background-color: #EDDDCC;
+    border-left: 4px solid orange;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+    4.4. CATEGORÍA Y PRECIO
+   ========================= */
+.categoria {
+    font-size: 0.75em;
+    text-transform: uppercase;
+    font-style: italic;
+    color: gray;
+    font-weight: bold;
+}
+
+.precio::before {
+    content: "➤";
+    color: orange;
+    font-size: 1em;
+    margin-right: 10px;
+}
+
+.precio {
+    font-size: 1.25em;
+    font-weight: bolder;
+}
+
+
+/* =============================
+    4.5. ENLACES <VER PRODUCTO>
+   ============================= */
+.comprar {
+    display: inline-block;
+    width: fit-content;
+    background-color: dimgray;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: all ease-in-out 0.20s;
+}
+
+.comprar:hover {
+    background-color: darkslategray;
+}
+
+
+/* =============
+    4.6. LISTAS
+   ============= */
+#ofertas, #servicios {
+    margin: 40px;
+    padding: 40px;
+    border: 2px solid lightgray;
+    background-color: whitesmoke;
+}
+
+#ofertas {
+    background-color: #EDDDCC;
+}
+
+/* color > ejemplo de herencia */
+#servicios {
+    color: #2c3e50;
+    background-color: #EDEDED;
+}
+
+#ofertas h2, #servicios h2 {
+    font-family: 'MonimerSerif';
+    font-weight: 900;
+    text-transform: uppercase;
+    border-bottom: 2px solid orange;
+    margin-bottom: 12px;
+    color: darkblue;
+}
+
+#servicios h2::after {
+    content: " ⚙︎";
+    color: #5D5D96;
+}
+
+#ofertas p, #servicios p {
+    margin: 10px 0;
+    color: gray;
+}
+
+#ofertas ul, #servicios ul {
+    margin-left: 40px;
+}
+
+#ofertas ul li, #servicios ul li {
+    padding-top: 5px;
+}
+
+#ofertas ul li:nth-child(even), #servicios ul li:nth-child(even) {
+    background-color: #E0E0E0;
+}
+
+#ofertas ul li:first-child, #servicios ul li:first-child {
+    color: darkgreen; 
+    font-weight: bold;
+}
+
+#ofertas ul li:last-child, #servicios ul li:last-child {
+    color: darkorchid; 
+    font-weight: bold;
+}
+
+
+/* =========================================
+    4.7. FORMULARIO: SELECTORES DE ATRIBUTO
+   ========================================= */
+#contacto {
+    background-color: #F2F4F7;
+    margin: 40px;
+    padding: 40px;
+    border: 2px solid lightgray;
+    background-color: whitesmoke;
+}
+
+#contacto h2 {
+    font-family: 'MonimerSerif';
+    font-weight: 900;
+    text-transform: uppercase;
+    border-bottom: 2px solid orange;
+    margin-bottom: 12px;
+    color: darkblue;
+}
+
+#contacto form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    background-color: #DFE0F0;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+form label {
+    font-weight: bold;
+}
+
+#contacto form label, input, button {
+    margin-top: 15px;
+}
+
+#contacto form button {
+    display: inline-block;
+    width: fit-content;
+    padding: 10px;
+    font-size: 0.8em;
+    background-color: #1D1F42;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+#contacto form input[required] {
+    border-left: 4px solid orange;
+}
+
+input[type="text"] {
+    background-color: whitesmoke;
+}
+
+input[type="email"] {
+    background-color: #CCCFED;
+}
+
+input {
+    padding: 10px;
+    border-radius: 5px;
+    transition: all ease-in-out 0.20s;
+}
+
+input:focus {
+    background-color: #DFCCED;
+}
+
+
+
+/* =========================================
+    4.12. ESPECIFICIDAD
+   ========================================= */
+p {
+    color: #555555;
+}
+
+#productos p {
+    color: #34495e;
+}
+
+.precio {
+    color: #c0392b;
+}
+
+/*
+    El precio aparece de color #34495e porque, aunque globalice más el .precio, 
+    #productos p está por encima de la clase precio, haciendo que el color que se aplique
+    sea ese e ignorando .precio, pero p pone todos los párrafos de todo el body de
+    color #555555.
+*/
+
+
+/* =========================================
+    4.13. CASCADA
+   ========================================= */
+h3 {
+    color: #2874a6;
+}
+
+h3 {
+    color: #7d3c98;
+}
+
+/*
+    El h3 aparece de color #7d3c98 (morado).
+    La regla que se aplica es la segunda (h3 { color: #7d3c98; })
+    porque al tener ambas reglas exactamente la misma especificidad, 
+    se aplica el principio de cascada: gana la última regla declarada en el código CSS.
+*/
+
+/* ================
+    EXTRA: FOOTER
+   ================ */
+footer {
+    background-color: #1D1F42;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 40px;
+    border-top: 2px solid orange;
+}
+
+footer p {
+    margin: 10px 0;
+    color: #DFCCED; 
+}
+
+footer p a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 15px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all ease-in-out 0.20s;
+}
+
+footer p a:hover {
+    background-color: #DFCCED;
+    color: black;
+}

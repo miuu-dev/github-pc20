@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Sarmiento & Brasas</title>
+    <link rel="icon" type="image/png" href="img/logos/logoHTML.png">
+    <link rel="stylesheet" href="../css/laCartaStyles.css">
+    <link rel="stylesheet" href="../css/wireframes.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div id="izquierda">
+            <a href="index.html">
+                <img src="../img/logos/logoBody.png" alt="Logo">
+            </a>
+            <h1>El Sarmiento & Brasas</h1>
+        </div>
+
+        <!-- 1. Checkbox oculto que controla el estado -->
+        <input type="checkbox" id="menu-toggle" class="toggle-menu">
+
+        <!-- 2. Botón visual (label) situado a la derecha -->
+        <label for="menu-toggle" class="btn-hamburguesa">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <!-- 3. El menú que se desplegará al pulsar -->
+        <nav>
+            <a href="../index.html">Inicio</a>
+            <a href="laCarta.html">La Carta</a>
+            <a href="menus.html">Menús</a>
+            <a href="reservas.html">Reservas</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+
+        <div id="derecha">
+            <button id="reservarMesa">Reservar mesa</button>
+        </div>
+    </header>
+
+
+
+    <!-- MAIN -->
+    <main>
+        <div class="portada">
+            <h2>La carta</h2>
+            <p>Recetas sinceras, producto de temporada y la brasa como hilo conductor</p>
+        </div>
+
+        <div class="menu-comidas">
+            <div class="comida">
+                <h2>Entrantes y tapas</h2>
+                <p class="subtitulo-seccion">Para abrir boca y compartir</p>
+                <table>
+                    <tr>
+                        <td class="plato">Croquetas cremosas de jamón ibérico</td>
+                        <td class="precio">12.50 €</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Torreznos crujientes con patata revolcona</td>
+                        <td class="precio">14.00 €</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Ensalada de tomate de temporada y ventresca</td>
+                        <td class="precio">16.50 €</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Mollejas de ternera a la brasa</td>
+                        <td class="precio">18.00 €</td>
+                    </tr>
+                </table>
+
+                <h2>Carnes a la brasa</h2>
+                <p class="subtitulo-seccion">Nuestro fuego de encina</p>
+                <table>
+                    <tr>
+                        <td class="plato">Chuletón de vaca madurada 45 días · 1kg</td>
+                        <td class="precio">65.00 €</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Solomillo de ternera, patata y jugo de Oporto</td>
+                        <td class="precio">27.00 €</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Pluma ibérica, pimiento y mostaza antigua</td>
+                        <td class="precio">24.00 €</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Pollo de corral al carbón, limón y romero</td>
+                        <td class="precio">21.00 €</td>
+                    </tr>
+                </table>
+
+                <h2>Pescados del día</h2>
+                <p class="subtitulo-seccion">Producto de lonja</p>
+                <table>
+                    <tr>
+                        <td class="plato">Falda salvaje a la brasa con verduritas</td>
+                        <td class="precio">26.00 €</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Bacalao confitado, ajo tostado y piparras</td>
+                        <td class="precio">24.00 €</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Pescado de lonja al punto</td>
+                        <td class="precio">S/M</td>
+                    </tr>
+                </table>
+
+                <h2>Postres caseros</h2>
+                <p class="subtitulo-seccion">El broche supremo</p>
+                <table>
+                    <tr>
+                        <td class="plato">Tarta de queso al horno</td>
+                        <td class="precio">7.50 €</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Torrija caramelizada y helado de canela</td>
+                        <td class="precio">8.00 €</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Chocolate, aceite de oliva y sal</td>
+                        <td class="precio">7.50 €</td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Bloque lateral de Vinos con origen -->
+            <div class="lateral-vinos">
+                <div class="vino-card">
+                    <h3>Vinos con origen</h3>
+                    <p>Más de 80 referencias de pequeños productores y denominaciones imprescindibles</p>
+                    <a href="#">VER CARTA DE VINOS</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-principal">
+            <div class="footer-section">
+                <img src="../img/logos/logoBody.png" alt="Logo del restaurante">
+                <p>Fuego lento, producto cercano y la hospitalidad de siempre</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Visítanos</h3>
+                <p>Calle del Roble, 18</p>
+                <p>28410 Manzanares el Real, Madrid</p>
+                <a href="html/contacto.html">Cómo llegar → </a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p>+34 91 852 42 10</p>
+                <p>hola@elsarmiento.es</p> 
+                <br>
+                <a href="instagram.com">Instagram</a>
+                <a href="facebook.com">Facebook</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Horario</h3>
+                <p>Martes - Jueves: 13:00 - 17:00</p>
+                <p>Viernes - Sábado: 13:00 - 00:00</p>
+                <p>Domingo: 13:00 - 17:30</p>
+            </div>
+        </div>
+
+        <div class="footer-secundario">
+            <p>&copy; 2026 La Brasa de Roble</p>
+            <div class="links-legales">
+                <a href="#">Aviso legal</a>
+                <a href="#">Privacidad</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,370 @@
+/* =============================================
+    5.1. CONFIGURACIÓN GENERAL Y MODELO DE CAJA
+    ============================================ */
+@font-face {
+    font-family: "CenturyGothic";
+    src: url(../font/CenturyGothic.otf);
+}
+
+@font-face {
+    font-family: "MenimerSerif";
+    src: url(../font/MonimerSerif.otf);
+}
+
+:root {
+    --color-principal: #2d2621;
+    --color-secundario: #8c7355;
+    --color-acento: #d9822b;
+    --color-fondo: #f7f4ee;
+    --color-main-footer: #e8e1d5;
+    --color-tarjetas: #ffffff;
+    --color-texto: #332d29;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "CenturyGothic", Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 1.2;
+    background-color: var(--color-fondo);
+    color: var(--color-texto)
+}
+
+#servicios, #proyectos, #equipo {
+    margin: 50px;
+}
+
+#servicios h2, #proyectos h2, #equipo h2, #contacto h2 {
+    font-family: "MenimerSerif";
+    border-bottom: 3px solid #f49b33; 
+    padding-bottom: 6px;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* ======================================
+    5.2. CABECERA Y NAVEGACIÓN - FLEXBOX
+    ===================================== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    background-color: var(--color-main-footer);
+    color: var(--color-acento);
+    border-bottom: 2px var(--color-tarjetas) solid;
+}
+
+nav {
+    display: flex;
+    gap: 15px
+}
+
+nav a {
+    color: var(--color-acento);
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+nav a:hover {
+    color: var(--color-principal)
+}
+
+
+/* =============================
+    5.3. PRESENTACIÓN - FLEXBOX
+    ============================ */
+.presentacion {
+    background-color: var(--color-tarjetas);
+    display: flex;
+    padding: 40px;
+    margin: 20px 50px;
+    gap: 50px;
+    border-radius: 20px;
+    border: 2px var(--color-secundario) dotted;
+}
+
+.presentacion img {
+    width: 60%;
+    border-radius: 20px;
+    box-shadow: 6px 6px 15px var(--color-principal);
+}
+
+.texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.texto h2 {
+    font-size: 2em;
+    border-bottom: 2px solid orange;
+    line-height: 1.5em;
+    font-family: "MenimerSerif";
+    font-weight: bolder;
+}
+
+.texto p {
+    font-size: 1.15em;
+    line-height: 1.5em;
+}
+
+
+/* =============================
+    5.4. SERVICIOS - FLEXBOX
+    ============================ */
+.contenedor-servicios {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.servicio {
+    /* 
+        Calculamos el ancho para 2 columnas exactas restando la mitad del gap (20px / 2 = 10px).
+        flex: 0 0 calc(50% - 10px); 
+    */
+    flex: 0 0 calc(50% - 10px);
+
+    background-color: var(--color-tarjetas);
+    padding: 10px;
+    border-radius: 10px;
+    border-left: 4px var(--color-secundario) solid;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.servicio:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08);
+    border-color: var(--color-acento);
+}
+
+.servicio h3 {
+    font-size: 1.5em;
+}
+
+
+/* ===========================
+    5.5. PROYECTOS - CSS GRID
+    ========================== */
+.contenedor-proyectos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.proyecto {
+    position: relative;
+    background-color: var(--color-tarjetas);
+    padding: 10px;
+    border-radius: 10px;
+    border-left: 4px var(--color-secundario) solid;
+}
+
+
+/* ==================================
+    5.6. PROYECTOS - POSICIONAMIENTO
+    ================================= */
+.proyecto .etiqueta {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: var(--color-acento);
+    padding: 5px;
+    font-weight: 900;
+    border-radius: 10px;
+    font-size: 0.7em;
+}
+
+
+/* ========================
+    5.7. EQUIPO - CSS GRID
+    ======================= */
+.contenedor-equipo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.miembro {
+    text-align: center;
+    background-color: var(--color-tarjetas);
+    padding: 20px;
+    border: 2px var(--color-principal) solid;
+    border-radius: 10px;
+}
+
+.miembro img {
+    display: block;
+    margin: 0 auto 15px auto;
+    width: 155px;
+    height: 155px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 3px var(--color-secundario) dotted;
+}
+
+.miembro h3 {
+    font-size: 1.5em;
+    font-weight: 900;
+}
+
+.miembro p {
+    font-size: 1.2em;
+    font-style: italic;
+    color: grey;
+}
+
+
+/* =========================
+    5.8. CONTACTO - FLEXBOX
+    ======================== */
+#contacto.contacto {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 20px;
+    padding: 20px;
+    margin: 50px;
+    background-color: var(--color-principal);
+    border-radius: 10px;
+}
+
+.datos-contacto, .formulario {
+    flex: 1;
+}
+
+.datos-contacto h2 {
+    margin-bottom: 15px;
+    color: whitesmoke;
+}
+
+.datos-contacto p {
+    margin-bottom: 10px;
+    color: whitesmoke;
+    line-height: 1.5;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column; 
+    gap: 15px;              
+}
+
+.formulario label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: whitesmoke;
+    margin-bottom: -5px;
+}
+
+.formulario input, .formulario textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: var(--color-tarjetas);
+    font-size: 1rem;
+    font-family: "CenturyGothic";
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.formulario textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.formulario input:focus, .formulario textarea:focus {
+    outline: none;
+    border-color: var(--color-acento);
+}
+
+.formulario button[type="submit"] {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: var(--color-acento);
+    color: var(--color-texto);
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    align-self: flex-start;
+}
+
+.formulario button[type="submit"]:hover {
+    background-color: var(--color-main-footer);
+    transform: translateY(-2px);
+}
+
+
+/* =================
+    5.9. BOTÓN FIJO
+   ================= */
+.ayuda {
+    position: fixed; 
+    bottom: 30px;    
+    right: 30px;    
+    background-color: var(--color-secundario); 
+    color: var(--color-tarjetas);
+    padding: 12px 22px;
+    border-radius: 30px;       
+    text-decoration: none;
+    font-weight: 700;
+    z-index: 1000;             
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.ayuda:hover {
+    background-color: #e08a25;
+    transform: translateY(-3px);
+}
+
+
+/* ==============
+    5.10. FOOTER
+   ============== */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px 40px;
+    background-color: var(--color-main-footer);
+    color: var(--color-acento);
+    border-bottom: 2px var(--color-tarjetas) solid;
+}
+
+footer p {
+    font-size: 1.2em;
+}
+
+footer p > a {
+    text-decoration: none;
+    color: var(--color-acento);
+    margin-left: 10px;
+    transition: 0.2s ease-in-out;
+}
+
+footer p > a:hover {
+    color: var(--color-texto);
+}

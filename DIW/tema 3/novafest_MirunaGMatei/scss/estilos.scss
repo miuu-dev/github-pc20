@@ -1,0 +1,255 @@
+@use "sass:map";
+@use "sass:list";
+@use "tema" as t;
+
+/* EJERCICIO 2: Anidamiento de selectores y & */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: t.$fondo;
+    color: t.$texto;
+    font-family: Arial, sans-serif;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: t.$ancho;
+    margin: auto;
+}
+
+.cabecera {
+    background-color: t.$superficie;
+    padding: t.$espacio * 2;
+
+    &__interior {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.logo {
+    text-decoration: none;
+    color: t.$texto;
+    font-weight: bold;
+    font-size: 24px;
+
+    span {
+        color: t.$acento;
+    }
+}
+
+.menu {
+    display: flex;
+    gap: t.$espacio * 3;
+
+    a {
+        text-decoration: none;
+        color: white;
+
+        &:hover {
+            color: t.$acento;
+        }
+    }
+}
+
+.portada {
+    background: linear-gradient(135deg, t.$superficie, t.$fondo);
+    padding: t.$espacio * 10 0;
+    min-height: 420px;
+
+    h1 {
+        font-size: 64px;
+        margin: 20px 0;
+
+        span {
+            color: t.$acento;
+        }
+    }
+}
+
+.portada__fecha {
+    color: t.$secundario;
+    font-weight: bold;
+}
+
+.seccion {
+    padding: t.$espacio * 7 0;
+}
+
+.pie {
+    @include t.aspecto(oscuro);
+    text-align: center;
+    padding: t.$espacio * 3;
+}
+
+.seccion h2 {
+    margin-top: 0;
+}
+
+.artistas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: t.$espacio * 3;
+}
+
+.artista {
+    background-color: t.$superficie;
+    padding: t.$espacio * 3;
+    border-radius: t.$radio;
+
+    h3 {
+        margin-bottom: 8px;
+    }
+
+    p {
+        margin-bottom: 0;
+    }
+
+    &__imagen {
+        @include t.centrar-flex;
+        height: 160px;
+        font-size: 48px;
+        font-weight: bold;
+        background-color: t.$fondo;
+        border-radius: t.$radio;
+    }
+
+    &--destacado {
+        border: 2px solid t.$acento;
+    }
+
+    &:hover {
+        box-shadow: 0 6px 20px rgba(0, 0, 0, .3);
+    }
+}
+
+.genero {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* EJERCICIO 3: Listas, Mapas e Interpolación */
+.entrada__precio {
+    color: map.get(t.$generos, rock);
+}
+
+/* EJERCICIO 4: Mixins con parámetros */
+.boton {
+    display: inline-block;
+    font-weight: bold;
+    text-decoration: none;
+    @include t.boton-estilo(t.$acento, t.$fondo);
+
+    &--principal {
+        @include t.boton-estilo(t.$secundario, t.$fondo);
+    }
+
+    &:hover {
+        filter: brightness(.9);
+    }
+}
+
+.entradas {
+    background: t.$superficie;
+
+    &__lista {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+}
+
+.entrada {
+    background: t.$fondo;
+    padding: 32px;
+    border-radius: t.$radio;
+
+    &__precio {
+        font-size: 32px;
+        font-weight: bold;
+    }
+
+    &--vip {
+        border: 2px solid t.$secundario;
+    }
+}
+
+/* EJERCICIO 5 */
+.portada h1 {
+    font-size: t.px-a-rem(64px);
+}
+
+.seccion h2 {
+    font-size: t.px-a-rem(list.nth(t.$tamanos, 3));
+}
+
+.artista h3 {
+    font-size: t.px-a-rem(list.nth(t.$tamanos, 2));
+}
+
+%aviso-base {
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+
+.aviso--info {
+    @extend %aviso-base;
+    background-color: #dbeafe;
+    color: #1e40af;
+}
+
+.aviso--exito {
+    @extend %aviso-base;
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+.aviso--importante {
+    @extend %aviso-base;
+    background-color: #ffe4e6;
+    color: #9f1239;
+}
+
+/* EJERCICIO 7: Condicionales, bucles y responsive */
+@each $nombre, $color in t.$generos {
+    .genero--#{$nombre} {
+        color: $color;
+    }
+}
+
+@for $i from 1 through 4 {
+    .espacio-#{$i} {
+        margin-top: $i * t.$espacio;
+    }
+}
+
+@media (max-width: 760px) {
+    .cabecera__interior {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .portada {
+        padding: 48px 0;
+        min-height: auto;
+    }
+
+    .portada h1 {
+        font-size: 40px;
+    }
+
+    .artistas, .entradas__lista {
+        grid-template-columns: 1fr;
+    }
+}

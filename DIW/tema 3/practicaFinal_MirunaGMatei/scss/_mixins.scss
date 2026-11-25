@@ -1,0 +1,31 @@
+// 4.3. scss/_mixins.scss - mixins reutilizables
+@use "variables" as *;
+
+@mixin accion($fondo, $texto) {
+    background-color: $fondo;
+    color: $texto;
+    display: inline-block;
+    padding: 14px 20px;
+    border-radius: 20px;
+    border: 2px solid transparent;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+@mixin seccion($vertical: 88px) {
+    padding-block: $vertical;
+}
+
+@mixin aspecto($modo) {
+    @if $modo == 'oscuro' {
+        background-color: $bosque;
+        color: $blanco;
+    } @else if $modo == 'claro' {
+        background-color: $crema;
+        color: $tinta;
+    } @else {
+        @warn("Modo desconocido");
+        background-color: white;
+        color: $tinta;
+    }
+}

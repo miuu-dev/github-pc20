@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas - El Sarmiento & Brasas</title>
+    <link rel="icon" type="image/png" href="img/logos/logoHTML.png">
+    <link rel="stylesheet" href="../css/reservasStyle.css">
+    <link rel="stylesheet" href="../css/wireframes.css">
+</head>
+<body>
+    <header>
+        <div id="izquierda">
+            <a href="index.html">
+                <img src="../img/logos/logoBody.png" alt="Logo">
+            </a>
+            <h1>El Sarmiento & Brasas</h1>
+        </div>
+
+        <!-- 1. Checkbox oculto que controla el estado -->
+        <input type="checkbox" id="menu-toggle" class="toggle-menu">
+
+        <!-- 2. Botón visual (label) situado a la derecha -->
+        <label for="menu-toggle" class="btn-hamburguesa">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <!-- 3. El menú que se desplegará al pulsar -->
+        <nav>
+            <a href="../index.html">Inicio</a>
+            <a href="laCarta.html">La Carta</a>
+            <a href="menus.html">Menús</a>
+            <a href="reservas.html">Reservas</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+
+        <div id="derecha">
+            <button id="reservarMesa">Reservar mesa</button>
+        </div>
+    </header>
+
+
+
+    <!-- MAIN -->
+    <main class="main-reservas">
+        <!-- Columna Izquierda: Banner Oscuro -->
+        <div class="reservas-info-lateral">
+            <p class="sub-etiqueta">— TU MESA</p>
+            <h2>Reserva<br><span>tu </span><span>momento</span></h2>
+            <p class="descripcion-reserva">Completa el formulario y recibirás la confirmación por correo. Para hoy, llámanos directamente.</p>
+            
+            <div class="urgencias">
+                <p class="sub-etiqueta">RESERVAS URGENTES</p>
+                <p class="telefono">+34 91 856 42 10</p>
+            </div>
+        </div>
+
+        <!-- Columna Derecha: Formulario -->
+        <div class="reservas-formulario-contenedor">
+            <form action="#" method="POST">
+                <div class="seccion-form">
+                    <h3><span>01</span> Datos de la reserva</h3>
+                    <p class="nota-campos">Los campos marcados son obligatorios.</p>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="fecha">FECHA *</label>
+                            <input type="date" id="fecha">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="hora">HORA *</label>
+                            <input type="time" id="hora">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="comensales">COMENSALES *</label>
+                            <select id="comensales">
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="mas">Más de 4</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="zona">ZONA DEL COMEDOR</label>
+                            <select id="zona">
+                                <option value="sin-preferencia">Sin preferencia</option>
+                                <option value="interior">Salón interior</option>
+                                <option value="terrazas">Terraza</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="seccion-form">
+                    <h3><span>02</span> Datos de contacto</h3>
+
+                    <div class="form-group full-width">
+                        <label for="email">EMAIL *</label>
+                        <input type="email" id="email" placeholder="hola@labrasaderoble.es">
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="observaciones">OBSERVACIONES O ALÉRGENOS</label>
+                        <textarea id="observaciones" rows="4" placeholder="Cuéntanos cómo podemos ayudarte..."></textarea>
+                    </div>
+
+                    <div class="form-checkbox">
+                        <input type="checkbox" id="privacidad">
+                        <label for="privacidad">Acepto la política de privacidad y el tratamiento de mis datos para gestionar esta reserva.</label>
+                    </div>
+
+                    <button type="submit" class="btn-enviar-reserva">SOLICITAR RESERVA →</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    
+    
+    
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-principal">
+            <div class="footer-section">
+                <img src="../img/logos/logoBody.png" alt="Logo del restaurante">
+                <p>Fuego lento, producto cercano y la hospitalidad de siempre</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>VISÍTANOS</h3>
+                <p>Calle del Roble, 18</p>
+                <p>28410 Manzanares el Real, Madrid</p>
+                <a href="contacto.html">CÓMO LLEGAR → </a>
+            </div>
+
+            <div class="footer-section">
+                <h3>CONTACTO</h3>
+                <p>+34 91 856 42 10</p>
+                <p>hola@labrasaderoble.es</p> 
+                <br>
+                <a href="instagram.com">Instagram</a>
+                <a href="facebook.com">Facebook</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>HORARIO</h3>
+                <p>Mar–Jue: 13:00–17:00</p>
+                <p>Vie–Sáb: 13:00–00:00</p>
+                <p>Dom: 13:00–17:30</p>
+            </div>
+        </div>
+
+        <div class="footer-secundario">
+            <p>&copy; 2026 La Brasa de Roble</p>
+            <div class="links-legales">
+                <a href="#">Aviso legal</a>
+                <a href="#">Privacidad</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

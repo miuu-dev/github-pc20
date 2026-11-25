@@ -1,0 +1,6 @@
+@use "sass:math";
+
+// 4.2. scss/_funciones.scss - función de conversión
+@function rem($p, $base: 16px) {
+    @return math.div($p, $base) * 1rem;
+}

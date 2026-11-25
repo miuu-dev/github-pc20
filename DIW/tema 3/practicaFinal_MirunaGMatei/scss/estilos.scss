@@ -1,0 +1,405 @@
+@use "_variables.scss" as *;
+@use "_funciones.scss" as f;
+@use "_mixins.scss" as m;
+@use "_utilidades.scss" as u;
+
+// Bloque A - BASE
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: $crema;
+    color: $tinta;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.envoltura {
+    width: 92%;
+    max-width: $maximo;
+    margin: auto;
+}
+
+.sobrelinea {
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.cabecera-seccion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 38px;
+
+    h2 {
+        margin: 0;
+        font-size: f.rem(40);
+    }
+
+    p {
+        max-width: 290px;
+        color: $muted;
+        margin: 0;
+    }
+}
+
+// Bloque B - Navegacion
+.barra-superior {
+    background-color: $crema;
+    border-bottom: 1px solid $linea;
+
+    &__interior {
+        display: flex;
+        min-height: 84px;
+        justify-content: space-between;
+        align-items: center;
+        gap: 24px;
+    }
+}
+
+.logotipo {
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 20px;
+
+    &__icono {
+        color: $verde;
+        font-size: 28px;
+    }
+}
+
+.navegacion {
+    display: flex;
+    gap: 30px;
+
+    a {
+        font-size: 14px;
+        font-weight: 700;
+        text-decoration: none;
+
+        &:hover {
+            color: $verde;
+        }
+    }
+}
+
+.enlace-acceso {
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom: 1px solid $tinta;
+    padding-bottom: 5px;
+}
+
+
+// Bloque C - Portada
+.portada {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    min-height: 575px;
+    margin-top: 32px;
+    border-radius: $radio;
+    overflow: hidden;
+    background-color: $bosque;
+    color: white;
+
+    &__contenido {
+        display: flex;
+        flex-direction: column;
+        padding: 60px;
+    }
+
+    h1 {
+        font-size: f.rem(66);
+        margin: 0 0 26px;
+
+        em {
+            color: $acento;
+        }
+    }
+
+    &__imagen {
+        position: relative;
+        background: url("../assets/portada.svg") center/cover no-repeat;
+    }
+
+    &__cifras {
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+        margin-top: auto;
+
+        div {
+            display: flex;
+        }
+
+        strong {
+            font-size: 28px;
+        }
+
+        span {
+            font-size: 12px;
+        }
+    }
+}
+
+
+// Bloque D - Catalogo
+.catalogo {
+    @include m.seccion();
+
+    &__distribucion {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        column-gap: 25px;
+    }
+}
+
+.filtros {
+    background-color: white;
+    border: 1px solid $linea;
+    border-radius: $radio;
+    padding: 25px;
+
+    h3 {
+        font-size: 18px;
+        margin-top: 0;
+    }
+
+    fieldset {
+        border: none;
+        border-top: 1px solid $linea;
+        margin-top: 20px;
+
+        legend {
+            font-weight: bold;
+        }
+
+        label {
+            display: block;
+            margin: 12px 0;
+            font-size: 14px;
+        }
+    }
+
+    &__nota {
+        background-color: $crema;
+        padding: 15px;
+        font-size: 12px;
+    }
+}
+
+.rutas {
+    display: grid;
+    gap: 18px;
+}
+
+.ruta {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    min-height: 225px;
+    background-color: white;
+    border: 1px solid $linea;
+    border-radius: $radio;
+    overflow: hidden;
+
+    &--principal {
+        border: 2px solid $verde;
+    }
+
+    &__foto {
+        background-position: center;
+        background-size: cover;
+
+        &--bosque {
+            background-image: url("../assets/bosque.svg");
+        }
+
+        &--lago {
+            background-image: url("../assets/lago.svg");
+        }
+
+        &--cumbre {
+            background-image: url("../assets/cumbre.svg");
+        }
+    }
+
+    &__cuerpo {
+        padding: 25px;
+    }
+
+    &__encabezado {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    h3 {
+        font-size: 23px;
+        margin: 12px 0;
+    }
+
+    p {
+        color: $muted;
+        font-size: 16px;
+    }
+
+    &__enlace {
+        color: $verde;
+        font-weight: bold;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+// Bloque E - Recomendacion
+.recomendacion {
+    @include m.aspecto('oscuro');
+
+    &__interior {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    &__visual {
+        position: relative;
+        background: url("../assets/lago.svg") center/cover no-repeat;
+    }
+
+    &__texto {
+        padding: 50px;
+    }
+
+    h2 {
+        color: $acento;
+        font-size: f.rem(50);
+        margin: 0 0 40px;
+    }
+}
+
+
+// Bloque F - Agenda
+.agenda {
+    @include m.seccion(92px);
+
+    &__lista {
+        list-style: none;
+        padding: 0;
+        border-top: 1px solid $linea;
+    }
+
+    &__evento {
+        display: grid;
+        grid-template-columns: 1fr 4fr 1fr;
+        column-gap: 25px;
+        align-items: center;
+        padding: 25px;
+        border-bottom: 1px solid $linea;
+    }
+
+    &__fecha {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        strong {
+            font-size: 40px;
+        }
+
+        span {
+            font-size: 12px;
+            font-weight: bold;
+        }
+    }
+
+    &__tipo {
+        font-size: 12px;
+        font-weight: bold;
+        margin: 5px 0;
+        color: $verde;
+    }
+
+    p {
+        color: $muted;
+        font-size: 13px;
+        margin: 0;
+    }
+
+    &__flecha {
+        font-size: 28px;
+        text-align: right;
+    }
+}
+
+
+// Bloque G - Pie
+.pie {
+    background-color: $bosque;
+    color: white;
+    padding: 26px 0;
+
+    &__interior {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px
+    }
+}
+
+
+// Adaptacion responsive - tablet y móvil
+@media (min-width: 701px) and (max-width: 1024px) {
+    .barra-superior__interior, .navegacion {
+        flex-wrap: wrap;
+    }
+
+    .portada__contenido {
+        padding: 36px;
+    }
+
+    .recomendacion__texto {
+        padding: 35px;
+    }
+
+    .catalogo__distribucion {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 700px) {
+    .barra-superior__interior, .cabecera-seccion, .pie__inferior {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navegacion {
+        flex-wrap: wrap;
+        gap: 15px
+    }
+
+    .portada, .recomendacion__interior, .ruta, .agenda__evento {
+        grid-template-columns: 1fr;
+    }
+
+    .portada__imagen, .recomendacion__visual, .ruta__foto {
+        min-height: 200px;
+    }
+
+    .portada h1 {
+        font-size: f.rem(36);
+    }
+
+    .cabecera-seccion h2, .recomendacion h2 {
+        font-size: f.rem(30);
+    }
+
+    .portada__contenido, .recomendacion__texto {
+        padding: 25px;
+    }
+}

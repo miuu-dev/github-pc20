@@ -1,0 +1,368 @@
+/* ==========================================
+   1. RESET Y CONFIGURACIÓN GENERAL
+   ========================================== */
+:root {
+    --color-principal: #3B2117;
+    --color-secundario: #A9431D;
+    --color-de-acento: #BD8B3E;
+    --color-de-fondo: #F8F3E8;
+    --color-complementario: #6D5947;
+    --color-de-apoyo: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background-color: var(--color-de-fondo);
+    color: var(--color-principal);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ==========================================
+    2. HEADER
+   ========================================== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: var(--color-de-fondo);
+    border-bottom: 1px solid #EAE3D2;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+#izquierda {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+#izquierda img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+#izquierda h1 {
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    color: var(--color-principal);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    text-transform: uppercase;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    font-size: 0.9rem;
+    color: var(--color-complementario);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: var(--color-principal);
+}
+
+.toggle-menu {
+    display: none !important;
+}
+
+#derecha button {
+    background-color: var(--color-secundario);
+    color: var(--color-de-apoyo);
+    border: none;
+    padding: 10px 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    transition: background-color 0.2s;
+}
+
+#derecha button:hover {
+    background-color: #8E3615;
+}
+
+/* ==========================================
+    3. MAIN - PORTADA
+   ========================================== */
+main {
+    width: 100%;
+}
+
+.portada {
+    position: relative;
+    height: 85vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.55)), url('img/main/presentacion.jpg') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 100px;
+    color: var(--color-de-apoyo);
+}
+
+.portada p:first-of-type {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--color-de-acento);
+}
+
+.portada p:first-of-type::before {
+    content: "";
+    display: inline-block;
+    width: 25px;
+    height: 1px;
+    background-color: var(--color-de-acento);
+}
+
+.portada h2 {
+    font-size: 3.8rem;
+    font-weight: normal;
+    line-height: 1.15;
+    max-width: 700px;
+    margin-bottom: 20px;
+}
+
+.portada h2 span {
+    font-style: italic;
+    font-family: 'Georgia', serif;
+    color: var(--color-de-acento);
+}
+
+.portada p:last-of-type {
+    font-size: 1rem;
+    max-width: 500px;
+    margin-bottom: 30px;
+    color: #E2DFD8;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.portada .boton {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.portada .boton a:first-child {
+    background-color: var(--color-secundario);
+    color: var(--color-de-apoyo);
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 500;
+}
+
+.portada .boton a:last-child {
+    color: var(--color-de-apoyo);
+    font-size: 0.9rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    border-bottom: 1px solid var(--color-de-apoyo);
+    padding-bottom: 2px;
+}
+
+/* ==========================================
+    4. PRESENTACIÓN
+   ========================================== */
+.presentacion {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    padding: 120px 100px;
+    align-items: center;
+    background-color: var(--color-de-fondo);
+}
+
+.presentacion h2 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    line-height: 1.2;
+    margin-bottom: 25px;
+    color: var(--color-principal);
+}
+
+.presentacion p {
+    font-size: 1.05rem;
+    color: var(--color-complementario);
+    margin-bottom: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.presentacion .chiquito {
+    font-size: 0.9rem;
+    color: #8C7865;
+    line-height: 1.5;
+}
+
+.presentacion img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* ==========================================
+    5. SECCIÓN CARTA (PLATOS)
+   ========================================== */
+.carta {
+    padding: 80px 100px;
+    background-color: #EFE9D8;
+}
+
+.carta h2 {
+    font-size: 2.2rem;
+    font-weight: normal;
+    margin-bottom: 40px;
+    color: var(--color-principal);
+}
+
+.imagenes-carta {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.carta-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.carta-item img {
+    width: 100%;
+    height: 380px !important;
+    object-fit: cover; /* Recorta la imagen de forma limpia para que no se deforme */
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.carta-item p {
+    font-size: 1.1rem;
+    color: var(--color-principal);
+    font-family: 'Georgia', serif;
+}
+
+/* ==========================================
+    6. SECCIÓN RESERVAS (BANNER INTERMEDIO)
+   ========================================== */
+.reservas {
+    background-color: var(--color-secundario);
+    color: var(--color-de-apoyo);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 100px;
+}
+
+.reservas h2 {
+    font-size: 2.2rem;
+    font-weight: normal;
+}
+
+.reservas a {
+    background-color: var(--color-de-apoyo);
+    color: var(--color-secundario);
+    padding: 14px 28px;
+    border-radius: 4px;
+    font-weight: 500;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    transition: background-color 0.2s;
+}
+
+.reservas a:hover {
+    background-color: var(--color-de-fondo);
+}
+
+/* ==========================================
+    7. FOOTER
+   ========================================== */
+footer {
+    background-color: var(--color-principal);
+    color: #D5CBC1;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.footer-principal {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.2fr;
+    gap: 40px;
+    padding: 80px 100px 60px 100px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-section img {
+    width: 32px;
+    margin-bottom: 15px;
+}
+
+.footer-section h3 {
+    color: var(--color-de-apoyo);
+    font-size: 1rem;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.footer-section p {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.footer-section a {
+    display: block;
+    font-size: 0.9rem;
+    color: #D5CBC1;
+    margin-top: 10px;
+    transition: color 0.2s;
+}
+
+.footer-section a:hover {
+    color: var(--color-de-apoyo);
+}
+
+.footer-secundario {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 100px;
+    font-size: 0.85rem;
+}
+
+.links-legales {
+    display: flex;
+    gap: 20px;
+}
+
+.links-legales a {
+    color: #D5CBC1;
+}
+
+.links-legales a:hover {
+    color: var(--color-de-apoyo);
+}

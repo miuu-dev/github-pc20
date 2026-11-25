@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Sarmiento & Brasas</title>
+    <link rel="icon" type="image/png" href="img/logos/logoHTML.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/wireframes.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div id="izquierda">
+            <a href="index.html">
+                <img src="img/logos/logoBody.png" alt="Logo">
+            </a>
+            <h1>El Sarmiento & Brasas</h1>
+        </div>
+
+        <!-- 1. Checkbox oculto que controla el estado -->
+        <input type="checkbox" id="menu-toggle" class="toggle-menu">
+
+        <!-- 2. Botón visual (label) situado a la derecha -->
+        <label for="menu-toggle" class="btn-hamburguesa">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <!-- 3. El menú que se desplegará al pulsar -->
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="./html/laCarta.html">La Carta</a>
+            <a href="./html/menus.html">Menús</a>
+            <a href="./html/reservas.html">Reservas</a>
+            <a href="./html/contacto.html">Contacto</a>
+        </nav>
+
+        <div id="derecha">
+            <button id="reservarMesa">Reservar mesa</button>
+        </div>
+    </header>
+
+
+
+    <!-- MAIN-->
+    <main>
+        <div class="portada">
+            <p>- Cocina de fuego y territorio</p>
+            <h2>El sabor de siempre, <span>hecho a la brasa</span></h2>
+            <p>Producto local, encina y tiempo. Una mesa honesta en el corazón de la sierra.</p>
+            <div class="boton">
+                <a href="html/reservas.html">Reservar mesa → </a>
+                <a href="html/laCarta.html">Descubre la carta</a>
+            </div>
+        </div>
+
+        <div class="presentacion">
+            <h2>Una cocina con raíces, un lugar al que volver</h2>
+            <p>Desde 1998 cocinamos como aprendimos: respetando el producto, dominando el fuego y atendiendo cada mesa como si fuera la primera.</p>
+            <p class="chiquito">Nuestra despensa mira a la sierra y cambia con sus estaciones. Carnes seleccionadas, verduras de guertas cercada y una bodega pensada para disfrutar.</p>
+        </div>
+
+        <div class="carta">
+            <h2>Platos que cuentan nuestra historia</h2>
+            <div class="imagenes-carta">
+                <div class="carta-item">
+                    <img src="img/main/chuleton.png" alt="Imagen de un plato de la carta">
+                    <p>Chuletón de vaca madurada</p>
+                </div>
+
+                <div class="carta-item">
+                    <img src="img/main/arroz.jpg" alt="Imagen de un plato de la carta">
+                    <p>Arroz del día</p>
+                </div>
+
+                <div class="carta-item">
+                    <img src="img/main/tapas.jpg" alt="Imagen de un plato de la carta">
+                    <p>Tapas de siempre</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="reservas">
+            <h2>Ven a disfrutar del fuego</h2>
+            <a href="html/reservas.html">Reservar ahora → </a>
+        </div>
+    </main>
+
+
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-principal">
+            <div class="footer-section">
+                <img src="img/logos/logoBody.png" alt="Logo del restaurante">
+                <p>Fuego lento, producto cercano y la hospitalidad de siempre</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Visítanos</h3>
+                <p>Calle del Roble, 18</p>
+                <p>28410 Manzanares el Real, Madrid</p>
+                <a href="html/contacto.html">Cómo llegar → </a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p>+34 91 852 42 10</p>
+                <p>hola@elsarmiento.es</p> 
+                <br>
+                <a href="instagram.com">Instagram</a>
+                <a href="facebook.com">Facebook</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Horario</h3>
+                <p>Martes - Jueves: 13:00 - 17:00</p>
+                <p>Viernes - Sábado: 13:00 - 00:00</p>
+                <p>Domingo: 13:00 - 17:30</p>
+            </div>
+        </div>
+
+        <div class="footer-secundario">
+            <p>&copy; 2026 La Brasa de Roble</p>
+            <div class="links-legales">
+                <a href="#">Aviso legal</a>
+                <a href="#">Privacidad</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
