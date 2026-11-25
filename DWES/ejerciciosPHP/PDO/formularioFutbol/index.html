@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Registro de equipo de fútbol</title>
+    <style>
+        @font-face {
+            font-family: 'CenturyGothic';
+            src: url('fonts/CenturyGothic.otf');
+        }
+
+        * {
+            font-family: 'CenturyGothic', sans-serif;
+        }
+
+        #formulario div {
+            padding-right: 5px;
+            padding-bottom: 5px; 
+        }
+    </style>
+</head>
+<body>
+	<h1>Registro de equipo de fútbol</h1>
+
+	<form action="php/insertar.php" method="post" id="formulario">
+		<div>
+			<label for="nombre">Nombre del equipo:</label>
+			<input type="text" id="nombre" name="nombre" required>
+		</div>
+		<div>
+			<label for="puntos">Puntos totales:</label>
+			<input type="number" id="puntos" name="puntos" min="0" required>
+		</div>
+		<div>
+			<label for="goles_favor">Goles a favor:</label>
+			<input type="number" id="goles_favor" name="goles_favor" min="0" required>
+		</div>
+		<div>
+			<label for="goles_contra">Goles en contra:</label>
+			<input type="number" id="goles_contra" name="goles_contra" min="0" required>
+		</div>
+		<button type="submit">Guardar equipo</button>
+	</form>
+
+	<h1>Actualización de equipo de fútbol</h1>
+	<form action="php/actualizar.php" method="post" id="formulario">
+		<div>
+			<label for="id">ID del equipo:</label>
+			<input type="text id="id" name="id" required>
+		</div>
+		<div>
+			<label for="puntos">Puntos totales:</label>
+			<input type="number" id="puntos" name="puntos" min="0" required>
+		</div>
+		<div>
+			<label for="goles_favor">Goles a favor:</label>
+			<input type="number" id="goles_favor" name="goles_favor" min="0" required>
+		</div>
+		<div>
+			<label for="goles_contra">Goles en contra:</label>
+			<input type="number" id="goles_contra" name="goles_contra" min="0" required>
+		</div>
+		<button type="submit">Guardar equipo</button>
+	</form>
+</body>
+</html>

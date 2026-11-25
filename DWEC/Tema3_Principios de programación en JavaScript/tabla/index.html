@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla</title>
+    <style>
+        @font-face {
+            font-family: "CenturyGothic";
+            src: url(../fonts/CenturyGothic.otf);
+        }
+
+        body {
+            font-family: "CenturyGothic";
+        }
+    </style>
+</head>
+<body>
+    <h1>Tabla hecha con JS</h1>
+
+    <table id="miTabla" border="1"></table>
+        <script>
+            /*
+                Estamos creando variables para 2 datos que queremos que el usuario nos de.
+
+                Estamos poniendo parseInt porque cuando hacemos un prompt, el resultado siempre es String y nosotros queremos que sea formato número y con parseInt pasamos el String a int
+            */
+            let filas = parseInt(prompt("Introduce el número de filas: "));
+            let columnas = parseInt(prompt("Introduce el número de columnas: "));
+
+            /*
+                Estamos haciendo una comprobación de que los datos que el usuario ha metido seas número enteros. Si mete algún String o float, nos mostrará una alerta, incluso si son negativos.
+            */
+            if(isNaN(filas) || isNaN(columnas) || filas < 0 || columnas < 0) {
+                alert("No puedes meter números negativos");
+            } else {
+                /* 
+                    Ahora hemos de construir la tabla y lo haremos con un bucle for aninados, es decir, un bucle dentro de otro
+                */
+                let htmlContent = "";
+                
+                for (let i = 1; i<= filas; i++) {
+                    htmlContent += "<tr>";
+
+                    for (let o = 1; o <= columnas; o++) {
+                        htmlContent += "<td>&nbsp;</td>";
+                    }
+
+                    htmlContent += "</tr>";
+                    
+                }
+
+                document.getElementById("miTabla").innerHTML = htmlContent;
+            }
+        </script>
+</body>
+</html>

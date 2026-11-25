@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4.4. Añadir elemento - PUSH</title>
+    <link rel="icon" href="../../img/miuuLogo.png">
+    <style>
+        @font-face {
+            font-family: 'CenturyGothic';
+            src: url('../../fonts/CenturyGothic.otf');
+        }
+
+        * {
+            font-family: 'CenturyGothic', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // método push
+        document.write("--- ANTES DEL PUSH --- <br>");
+        let cantantes = ["Simón"];
+        for(let i in cantantes) {
+            document.write(`Cantantes ${cantantes[i]} <br>`)
+        }
+
+        document.write("<br> --- DESPUÉS DEL PUSH --- <br>");
+        cantantes.push("<strong>Garfunkel</strong>");
+        for(let i in cantantes) {
+            document.write(`Cantantes ${cantantes[i]} <br>`)
+        }
+
+
+        // método unshift
+        document.write("<br><br>")
+        document.write("--- ANTES DEL UNSHIFT --- <br>");
+        let planetas = ["Mercurio"];
+        for(let i in planetas) {
+            document.write(`Planetas ${planetas[i]} <br>`)
+        }
+
+        document.write("<br> --- DESPUÉS DEL UNSHIFT --- <br>");
+        planetas.unshift("<strong>Saturno</strong>");
+        for(let i in cantantes) {
+            document.write(`Planetas ${planetas[i]} <br>`)
+        }
+    </script>
+</body>
+</html>

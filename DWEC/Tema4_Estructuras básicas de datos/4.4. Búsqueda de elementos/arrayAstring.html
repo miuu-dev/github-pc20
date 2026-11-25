@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4.4. Arrays a String</title>
+    <link rel="icon" href="../../img/miuuLogo.png">
+    <style>
+        @font-face {
+            font-family: 'CenturyGothic';
+            src: url('../../fonts/CenturyGothic.otf');
+        }
+
+        * {
+            font-family: 'CenturyGothic', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        /*
+            join de los arrays permite convertir un array en un string. El string resultante con­ tiene todos los elementos del array:
+        */
+        const dias=["Lunes","Martes","Miércoles","Jueves", "Viernes","Sábado","Domingo"];
+        document.write(dias.join());
+        
+        /*
+            Cada elemento se separa con una coma. Es posible indicar otro separador ya que se puede indicar un texto como parámetro de join para que sea utilizado como separador:
+        */
+        document.write("<br>", dias.join(" "))
+        document.write("<br>", dias.join(" - "))
+
+
+    </script>
+</body>
+</html>

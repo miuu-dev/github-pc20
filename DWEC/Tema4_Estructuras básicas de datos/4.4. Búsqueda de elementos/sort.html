@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4.4. Sort</title>
+    <link rel="icon" href="../../img/miuuLogo.png">
+    <style>
+        @font-face {
+            font-family: 'CenturyGothic';
+            src: url('../../fonts/CenturyGothic.otf');
+        }
+
+        * {
+            font-family: 'CenturyGothic', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        /* No sabe ordenar con las características nacionales (mayus, minus, tildes, ñ) */
+        const dias=["Lunes","Martes","Miércoles","Jueves","Viernes","Sábado","Domingo"];
+        document.write("Antes de ordenarlo alfabéticamente: ", dias)
+        dias.sort();
+        document.write("<br>Después de ordenarlo alfabéticamente: ", dias)
+    </script>
+</body>
+</html>

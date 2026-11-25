@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lotería Primitiva</title>
+    <link rel="icon" href="../../img/miuuLogo.png">
+    <style>
+        @font-face {
+            font-family: 'CenturyGothic';
+            src: url('../../fonts/CenturyGothic.otf');
+        }
+
+        * {
+            font-family: 'CenturyGothic', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        let combs = []
+
+        for (let i = 0; i < 20; i++) {
+            let comb = new Set()
+            let num = 0
+
+            // si sale un número repetido, gracias a Set(), este no se añadirá
+            do {
+                num = parseInt(1 + Math.random() * 49)
+                comb.add(num)
+            } while (comb.size < 6)
+
+            combs.push(comb)
+
+            // console.log([...comb].sort((a, b) => (a - b))); // menos a mayor
+            // document.write([...comb].sort((a,b)=>(b-a)).join('\n')); // mayor a menor
+        }
+
+        console.log(combs);
+        
+    </script>
+</body>
+
+</html>

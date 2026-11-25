@@ -1,0 +1,9 @@
+En clase, en los ficheros php debe estar así:
+    $host = 'localhost';
+    $user = 'root';
+    $password = '';
+
+En casa, en los ficheros php debe estar así:
+    $host = 'db';
+    $user = 'root';
+    $password = 'itssm1uu07_@PHPmyAdmin';

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Métodos en el array</title>
+    <link rel="icon" href="../../img/miuuLogo.png">
+    <style>
+        @font-face {
+            font-family: 'CenturyGothic';
+            src: url('../../fonts/CenturyGothic.otf');
+        }
+
+        * {
+            font-family: 'CenturyGothic', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Trabajando con Arrays</h1>
+    <ol>
+        <li>Añadir elementos</li>
+        <li>Sustituir elementos</li>
+        <li>Extraer elementos</li>
+        <li>Visualizar un elemento</li>
+    </ol>
+
+    <script>
+        let array1 = []
+
+        while(true) {
+            let op = prompt("Escribe tu opción: ")
+            if (op === null) break // en caso de que se cancele, deja de aparecer el prompt
+
+            let op2
+            let op3
+            let elemento = prompt("Nuevo elemento: ")
+
+            switch (op) {
+                case "1":
+                    op2 = prompt("1. Al principio \n2. Al final \n3. Por el medio: ")
+                    if(op2 == "1") {
+                        array1.unshift(elemento)
+                    } else if (op2 == "2") {
+                        array1.push(elemento)
+                    } else {
+                        op3 =  parseInt(prompt("Posición del elemento: "))
+                        array1.splice(op3, 0, elemento)
+                    }
+                    console.log(array1)
+                    break;
+                    
+                case "2":
+
+                    break;
+
+                case "3":
+
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>

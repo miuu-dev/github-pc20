@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4.4. Quitar elementos - POP</title>
+    <link rel="icon" href="../../img/miuuLogo.png">
+    <style>
+        @font-face {
+            font-family: 'CenturyGothic';
+            src: url('../../fonts/CenturyGothic.otf');
+        }
+
+        * {
+            font-family: 'CenturyGothic', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        document.write("--- ANTES DEL POP --- <br>")
+        let cantantes = ["Peter", "Paúl", "Mary"];
+        document.write(`El array ha quedado así: ${cantantes} <br>`);
+        document.write("<br>--- DESPUÉS DEL POP ---<br>")
+        let x = cantantes.pop();
+        document.write(`El array ha quedado así: ${cantantes} <br>`);
+        document.write(`Se quitó la última celda que es <strong>${x}</strong>`);
+
+        document.write("<br><br><br>--- ANTES DEL SHIFT --- <br>")
+        let planetas = ["Mercurio", "Jupiter"];
+        document.write(`El array ha quedado así: ${planetas} <br>`);
+        document.write("<br>--- DESPUÉS DEL SHIFT ---<br>")
+        let y = planetas.pop();
+        document.write(`El array ha quedado así: ${planetas} <br>`);
+        document.write(`Se quitó la última celda que es <strong>${y}</strong>`);
+    </script>
+</body>
+</html>

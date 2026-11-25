@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4.4. Desestructuración de Arrays</title>
+    <link rel="icon" href="../../img/miuuLogo.png">
+    <style>
+        @font-face {
+            font-family: 'CenturyGothic';
+            src: url('../../fonts/CenturyGothic.otf');
+        }
+
+        * {
+            font-family: 'CenturyGothic', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let [saludo,despedida,cierre] = ["Hola", "Adiós", "Hasta nunca"]
+        document.write(saludo)
+        document.write("<br>", despedida)
+        document.write("<br>", cierre)
+
+        /* spread */
+        let array = [1,2,3]
+        let [x,y,z] = [...array]
+        document.write("<br>", [x,y,z])
+
+        let a,b,array2
+        [a,b,...array2] = [1,2,3,4,5]
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triángulo de asteriscos</title>
+    <style>
+        @font-face {
+            font-family: "CenturyGothic";
+            src: url(../fonts/CenturyGothic.otf);
+        }
+
+        body {
+            font-family: "CenturyGothic";
+        }
+    </style>
+</head>
+<body>
+    <script>
+
+        let altura = parseInt(prompt("Altura de la piramida: "))
+            
+        for (let i = 1; i <= altura; i++) {
+            for(let j = 1; j <= i; j++) {
+                document.write("* ");
+            }
+            document.write("<br>");
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4.3. Recorrer arrays</title>
+    <link rel="icon" href="../../img/miuuLogo.png">
+    <style>
+        @font-face {
+            font-family: "CenturyGothic";
+            src: url(../../fonts/CenturyGothic.otf);
+        }
+
+        body {
+            font-family: "CenturyGothic";
+        }
+    </style>
+</head>
+<body>
+    <script>
+        document.write("--- BUCLE FOR PARA ARRAYS MOSTRANDO LAS UNDEFINED ---<br>");
+        const notas=[5,6/2,,9,8,,9,7,8];
+        for(let i=0; i <notas. length; i++) {
+            document.write(`La nota <strong>${i}</strong> es <strong>${notas[i]}</strong> <br>`);
+        }
+
+        document.write("<br>--- BUCLE FOR PARA ARRAYS SIN LOS UNDEFINED ---<br>");
+        for(let i=0; i <notas. length; i++) {
+            if(notas[i] != undefined) {
+                document.write(`La nota <strong>${i}</strong> es <strong>${notas[i]}</strong> <br>`);
+            }
+        }
+    </script>
+</body>
+</html>

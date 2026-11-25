@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palíndromos</title>
+    <link rel="icon" href="../../img/miuuLogo.png">
+    <style>
+        @font-face {
+            font-family: 'CenturyGothic';
+            src: url('../../fonts/CenturyGothic.otf');
+        }
+
+        * {
+            font-family: 'CenturyGothic', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let texto = prompt("Escribe un texto: ")
+
+        // en otra variable, voy a guardar el texto del usuario y le doy a dar la vuelta, y luego los comparo
+        let reversa = [...texto].reverse().join("")
+
+        // if(texto == reversa) {
+        //     alert("Es un palíndromo: " + texto)
+        // } else {
+        //     alert("No es un palíndromo: " + texto)
+        // }
+
+        // OPERADOR CONDICIONAL / TERNARIO
+        alert((texto==reversa)?"Es un palíndromo: " + texto:"No es un palíndromo: " + texto)
+    </script>
+</body>
+</html>

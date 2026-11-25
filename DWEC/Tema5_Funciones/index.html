@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursividad</title>
+    <link rel="icon" href="../../img/miuuLogo.png">
+    <style>
+        @font-face {
+            font-family: 'CenturyGothic';
+            src: url('../../fonts/CenturyGothic.otf');
+        }
+
+        * {
+            font-family: 'CenturyGothic', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        let num;
+
+        do {
+            num = Number(prompt("Escribe un número entero positivo: "));
+
+            if (!Number.isInteger(num) || num <= 0) {
+                alert("Has introducido algo que no es un número entero positivo")
+            }
+        } while (!Number.isInteger(num) || num <= 0)
+
+
+
+        function factorial(n) {
+            if (n <= 1) {
+                return 1;
+            } else {
+                return n * factorial(n - 1);
+            }
+        }
+
+        alert("El factorial de " + num + " es " + factorial(num));
+    </script>
+</body>
+
+</html>

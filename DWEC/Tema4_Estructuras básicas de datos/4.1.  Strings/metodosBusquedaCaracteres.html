@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 4.1.3.4. Métodos de búsqueda de caracteres</title>
+    <style>
+        @font-face {
+            font-family: "CenturyGothic";
+            src: url(../../fonts/CenturyGothic.otf);
+        }
+
+        body {
+            font-family: "CenturyGothic";
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let texto = "Hoy es lunes y ya no hace tanto calor como el lunes anterior";
+        document.write(texto + "<br><br>");
+        /* let texto2 = "   Hoy     es         lunes     y           ya    no   hace   tanto   calor   como   el   lunes   anterior   ";         
+        document.write("<br>" + texto2 + "<br><br>"); */
+
+        /**
+         * Devuelve -1 cuando NO ENCUENTRA lo que le pedimos
+         */
+
+
+
+        /* indexOf -> devuelve el caracter donde empieza LA PRIMERA palabra o EL ÚLTIMO caracter en el que se encuentra la palabra o caracter indicado */ 
+        document.write("--- USO DE INDEXOF ---");
+        document.write("<br> ¿Dónde se encuentra la primera palabra lunes? <strong> " + texto.indexOf("lunes") + "</strong>");
+        document.write("<br> ¿Dónde se encuentra la primera palabra martes? <strong> " + texto.indexOf("martes") + "</strong>");
+
+
+        
+        /* lastIndexOf -> devuelve el caracter donde empieza LA ÚLTIMA palabra o EL ÚLTIMO caracter en el que se encuentra la palabra o caracter indicado */ 
+        document.write("<br><br> --- USO DE LASTINDEXOF ---");
+        document.write("<br> ¿Dónde se encuentra la última palabra lunes? <strong> " + texto.lastIndexOf("lunes") + "</strong>");
+        document.write("<br> ¿Dónde se encuentra la palabra última martes? <strong> " + texto.lastIndexOf("martes") + "</strong>");
+
+
+
+        /* endsWith -> devuelve true SI termina con el caracter o palabra indicada ; devuelve false si NO termina con el caracter o palabra indicada */ 
+        document.write("<br><br> --- USO DE ENDSWITH ---");
+        document.write("<br> ¿Termina con n? <strong> " + texto.endsWith("n") + "</strong>");
+        document.write("<br> ¿Termina con r? <strong> " + texto.endsWith("r") + "</strong>");
+
+
+
+        /* replace -> devuelve la frase indicada, pero con el caracter o la palabra reemplazada */ 
+        document.write("<br><br> --- USO DE REPLACE ---"); 
+        document.write("<br> Reemplazamos calor por frío: <strong> " + "<br>" + texto.replace("calor", "frío") + "</strong>");
+
+
+
+        /* trim -> devuelve el string sin los espacios SOBRANTES del PRINCIPIO y FINAL, pero los de dentro se quedan igual */ 
+        /* document.write("<br><br> --- USO DE TRIM ---"); 
+        document.write("<br>" + texto2.trim()); */
+
+
+
+        /* slice -> saca del texto desde el caracter inicial hasta el final */
+        document.write("<br><br> --- USO DE SLICE ---"); 
+        document.write("<br><strong> " + texto.slice(3, 10) + "</strong>");
+
+
+        
+        /**
+         * substring -> empieza desde el número del caracter indicado y corta en el segundo número del caracter indicado
+         * substr -> empieza extrayendo desde el número del caracter indicado y avanza el número de posiciones indicado en el segundo número
+         */
+        document.write("<br><br> --- USO DE SUBSTRING Y SUBSTR ---"); 
+        document.write("<br><strong> " + texto.substring(3, 10) + "</strong>");
+        document.write("<br><strong> " + texto.substr(3, 10) + "</strong>");
+
+
+
+        /**
+         * split -> genera un array en UNA SOLA celda con todo el texto entero, pero entre paréntesis le indicamos el caracter que servirá como el separador para tener varias celdas de ese string
+        
+         * al poner un ,(numero) -> indicamos cuantas celdas queremos que tenga el array, en este caso solo tendrá 3, dando de resultado "hoy,es,lunes" 
+    
+         * texto2.split("")
+            resultado: Array(62) [ "H", "o", "y", " ", " ", " ", " ", "e", "s", " ", … ];
+            "" -> dentro de un array se llamada -> cadena vacía
+         */ 
+        document.write("<br><br> --- USO DE SPLIT ---"); 
+        document.write("<br><strong> " + texto.split(" ") + "</strong>");
+        document.write("<br><strong> " + texto.split(" ", 3) + "</strong>");
+
+
+
+        /* String.fromCharCode -> concierte el código unicode a texto */  
+        document.write("<br><br> --- USO DE STING.FROMCHATCODE ---"); 
+        document.write("<br><strong> " + String.fromCharCode(119) + "</strong>");
+    </script>
+</body>
+</html>

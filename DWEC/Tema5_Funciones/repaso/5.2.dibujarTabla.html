@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dibujar una tabla</title>
+    <link rel="icon" href="../../img/miuuLogo.png">
+    <style>
+        @font-face {
+            font-family: 'CenturyGothic';
+            src: url('../../fonts/CenturyGothic.otf');
+        }
+
+        * {
+            font-family: 'CenturyGothic', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+        let columnas = parseInt(prompt("¿Cuántas columnas quieres? "))
+        let filas = parseInt(prompt("¿Cuántas filas quieres? "))
+
+        function crearTabla(f = 4, c = 10) {
+            document.write('<table border="1" style="width: 100%;">');
+
+                for(let i = 0; i < f; i++) {
+                    document.write('<tr>')
+
+                        for (let j = 0; j < c; j++) {
+                            document.write(`<td> ${i} : ${j} </td>`)
+                        }
+
+                    document.write('</tr>')
+                }
+
+            document.write('</table>')
+        }
+
+        crearTabla(filas || undefined, columnas || undefined)
+    </script>
+</body>
+
+</html>

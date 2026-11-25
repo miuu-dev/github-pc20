@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4.4. Tamaño de los arrays</title>
+    <style>
+        @font-face {
+            font-family: 'CenturyGothic';
+            src: url('../../fonts/CenturyGothic.otf');
+        }
+
+        * {
+            font-family: 'CenturyGothic', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // a pesar de tener una celda undefined, .legth también lo contará como que la celda existe, incluso sin tener información dentro
+        let dias=["Lunes","Martes","Miércoles","Jueves",,"Sábado","Domingo"];
+        document.write(dias.length) // Sale 7
+    </script>
+</body>
+</html>

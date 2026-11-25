@@ -1,0 +1,5 @@
+ACTIVAR: 
+source envflask/bin/activate
+
+DESACTIVAR:
+deactivate 2>/dev/null

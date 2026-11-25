@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4.4. Concatenar y copiar arrays</title>
+    <link rel="icon" href="../../img/miuuLogo.png">
+    <style>
+        @font-face {
+            font-family: 'CenturyGothic';
+            src: url('../../fonts/CenturyGothic.otf');
+        }
+
+        * {
+            font-family: 'CenturyGothic', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let planetas1 = ["Mercurio, Tierra, Saturno"];
+        let planetas2 = ["Venus, Júpiter y Urano"];
+        document.write(`Array 1: <strong> ${planetas1} </strong>`);
+        document.write(`<br>Array 2: <strong> ${planetas2} </strong>`);
+
+        let planetas = planetas1.concat(planetas2);
+        document.write(`<br><br>Array 1 y 2 concatenado: <strong> ${planetas} </strong>`);
+
+        let copiaPlanetas = planetas.concat();
+        document.write(`<br><br>Copia de Array 1 y 2: <strong> ${copiaPlanetas} </strong>`);
+
+        document.write("<br><br>--- SEGUNDA FORMA DE COPIAR ARRAYS ---");
+        let copiaPlanetas2 = planetas1.slice();
+        document.write(`<br>Copia de Array 1: <strong> ${copiaPlanetas2} </strong>`);
+    </script>
+</body>
+</html>

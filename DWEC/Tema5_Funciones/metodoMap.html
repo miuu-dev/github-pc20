@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Método Map</title>
+    <link rel="icon" href="../../img/miuuLogo.png">
+    <style>
+        @font-face {
+            font-family: 'CenturyGothic';
+            src: url('../../fonts/CenturyGothic.otf');
+        }
+
+        * {
+            font-family: 'CenturyGothic', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        let array1 = [1, 5, 677, 2, 8, 4, 5, 67];
+
+
+
+        let arrayCopia = array1.map(function (x) {
+            return x;
+        }) // copia del array1
+
+        console.log("El primer array: ");
+        console.log(array1);
+
+        console.log("\n");
+
+
+        console.log("La copia del primer array: ");
+        console.log(arrayCopia);
+
+        console.log("\n");
+
+        let arrayDoble = array1.map(function (x) {
+            return 2 * x;
+        }) // los valores son el doble del primer array
+
+        console.log("El doble del primer array: ");
+        console.log(arrayDoble);
+
+        console.log("\n");
+
+
+        // valor inicial del reduce es 0, acu es el acumulador que vamos teniendo para poder guardar la suma que vayamos realizando
+        let suma = array1.reduce((acu, valor) => acu + valor, 0) // sumamos todos los valores del array 1
+        console.log("Total del array1");
+        console.log(suma);
+
+        console.log("\n");
+
+        let mayorDe5 = array1.filter(x => x > 5)
+        console.log("Valores del array mayores de 5");
+        console.log(mayorDe5);
+
+        console.log("\n");
+
+        let palabras = ["tomate", "sandía", "pera", "melón", "plátano", "uvas", "manzana"]
+        let frutasConA = palabras.filter(x => x.includes('a'))
+        console.log("Frutas que contienen la letra A: ");
+        console.log(frutasConA);
+
+        console.log("\n");
+
+        let frutasSinA = palabras.filter(x => !x.includes('a'))
+        console.log("Frutas que no contienen la letra A: ");
+        console.log(frutasSinA);
+
+    </script>
+</body>
+
+</html>

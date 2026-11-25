@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4.7. Código César</title>
+    <link rel="icon" href="../../img/miuuLogo.png">
+    <style>
+        @font-face {
+            font-family: 'CenturyGothic';
+            src: url('../../fonts/CenturyGothic.otf');
+        }
+
+        * {
+            font-family: 'CenturyGothic', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let mensaje = prompt("Escriba el mensaje: ")
+        let clave = parseInt(prompt("Indique la clave (número): "))
+
+        let cifrado = ""
+        let codigo
+
+        for(let i = 0; i < mensaje.length; i++) {
+            codigo = mensaje.charCodeAt(i) + clave 
+
+            cifrado += String.fromCharCode(codigo)
+        }
+
+        alert(`Mensaje original: ${mensaje} \n Cifrado: ${cifrado}`)
+    </script>
+</body>
+</html>

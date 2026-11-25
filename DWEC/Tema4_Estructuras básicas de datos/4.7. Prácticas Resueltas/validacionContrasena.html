@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validación de Contraseña</title>
+    <link rel="icon" href="../../img/miuuLogo.png">
+    <style>
+        @font-face {
+            font-family: 'CenturyGothic';
+            src: url('../../fonts/CenturyGothic.otf');
+        }
+
+        * {
+            font-family: 'CenturyGothic', sans-serif;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #1e1b4b, #4c1d95 50%, #be185d);
+            padding: 20px;
+        }
+
+        .card {
+            width: 100%;
+            max-width: 420px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 36px 32px;
+            text-align: center;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+            animation: aparecer 0.5s ease;
+        }
+
+        .card h1 {
+            margin: 0 0 8px;
+            font-size: 1.5rem;
+            color: #1e1b4b;
+        }
+
+        .card .icono {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            margin: 0;
+            line-height: 1.6;
+            color: #444;
+        }
+
+        .card .faltan {
+            margin-top: 16px;
+            padding: 12px 16px;
+            border-radius: 12px;
+            background: #fef2f2;
+            color: #b91c1c;
+            font-size: 0.95rem;
+        }
+
+        .card.ok h1 {
+            color: #15803d;
+        }
+
+        .card.error h1 {
+            color: #b91c1c;
+        }
+
+        @keyframes aparecer {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card" id="resultado"></div>
+
+    <script>
+        let pwd = prompt("Introduce la contraseña: ")
+        let codigo
+        // son 5 variables que queremos llenarlas (fill) con el valor 'false'
+        let [mayus, minus, number, caracEspecial, min] = Array(5).fill(false)
+        // let mayusEsp = new Set("ÑÁÉÍÓÚ")
+        // let minusEsp = new Set("ñáéíóú")
+
+
+
+        // compruebo letras mayúscula: 65 a 90 en la tabla UNICODE
+        for (let i = 0; i <= pwd.length; i++) {
+            codigo = pwd.charCodeAt(i)
+            if (codigo > 64 && codigo < 91 || mayusEsp.has(pwd[1])) {
+                // esta letra es mayúscula
+                mayus = true
+                break
+            }
+        }
+
+        // compruebo letras minúsculas: 97 a 122 en la tabla UNICODE
+        for (let i = 0; i <= pwd.length; i++) {
+            codigo = pwd.charCodeAt(i)
+            if (codigo > 96 && codigo < 123 || minusEsp.has(pwd[1])) {
+                // esta letra es minúscula
+                minus = true
+                break
+            }
+        }
+
+        // comprobamos que tenga algún número: 48 a 57 en la tabla UNICODE
+        for (let i = 0; i <= pwd.length; i++) {
+            codigo = pwd.charCodeAt(i)
+            if (codigo > 47 && codigo < 58) {
+                // es un número
+                number = true
+                break
+            }
+        }
+
+        // comprobamos que tenga algún caracter especial: 33 a 47, 58 a 64 o 91 a 96 en la tabla UNICODE
+        for (let i = 0; i <= pwd.length; i++) {
+            codigo = pwd.charCodeAt(i)
+            if (codigo > 32 && codigo < 48 || codigo > 57 && codigo < 65 || codigo > 90 && codigo < 97) {
+                // es un caracter especial
+                caracEspecial = true
+                break
+            }
+        }
+
+        // comprobamos que tenga al menos mínimo 8 caracteres
+        if (pwd >= 8) {
+            min = true
+        }
+
+
+
+        // esto es para decorarlo
+        const resultado = document.getElementById("resultado")
+
+        if (mayus && minus && number && caracEspecial && min) {
+            resultado.classList.add("ok")
+            resultado.innerHTML = `
+        <div class="icono">✅</div>
+        <h1>¡Contraseña válida!</h1>
+        <p>La contraseña cumple con todos los requisitos.</p>
+    `
+        } else {
+            let faltan = []
+
+            if (!mayus) faltan.push("una mayúscula")
+            if (!minus) faltan.push("una minúscula")
+            if (!number) faltan.push("un número")
+            if (!caracEspecial) faltan.push("un carácter especial")
+
+            resultado.classList.add("error")
+            resultado.innerHTML = `
+        <div class="icono">❌</div>
+        <h1>Contraseña no válida</h1>
+        <p>La contraseña no cumple con todos los requisitos.</p>
+        <div class="faltan">Falta al menos: ${faltan.join(", ")}</div>
+    `
+        }
+
+        // OPERADOR CONDICIONAL / TERNARIO
+        // console.log(mayus == true ? "Hay al menos UNA mayúscula":"NO hay mayúsculas");
+        // console.log(minus == true ? "Hay al menos UNA minúsculas":"NO hay minúsculas");
+        // console.log(number == true ? "Hay al menos UN número":"NO hay números");
+        // console.log(caracEspecial == true ? "Hay al menos UN caracterEspecial":"NO hay NINGÚN caracter especial");
+    </script>
+</body>
+
+</html>

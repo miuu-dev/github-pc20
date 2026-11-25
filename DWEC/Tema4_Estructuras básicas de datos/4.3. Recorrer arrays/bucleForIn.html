@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bucle for ... in</title>
+    <link rel="icon" href="../../img/miuuLogo.png">
+    <style>
+        @font-face {
+            font-family: 'CenturyGothic';
+            src: url('../../fonts/CenturyGothic.otf');
+        }
+
+        * {
+            font-family: 'CenturyGothic', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // Esto se salta las celdas que están undefined
+        let array1 = [6,,,5,,,,9,,,,7,7,,,,12]
+        for(let i in array1) {
+            document.write(`La celda ${i} tiene un ${array1[i]} <br>`)
+        }
+
+        document.write("<br>")
+
+        let array2 = "Probando los for"
+        for(let i in array2) {
+            document.write(`Caracter ${i} = ${array2[i]} <br>`)
+        }
+    </script>
+</body>
+</html>

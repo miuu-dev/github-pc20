@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4.4. ¿Es un array?</title>
+    <link rel="icon" href="../../img/miuuLogo.png">
+    <style>
+        @font-face {
+            font-family: 'CenturyGothic';
+            src: url('../../fonts/CenturyGothic.otf');
+        }
+
+        * {
+            font-family: 'CenturyGothic', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let a = [1,2,3,4,5,6,7,8,9];
+        let b = "Hola";
+        document.write(a instanceof Array); //Escribe true
+        document.write("<br>")
+        document.write(b instanceof Array); //Escribe false
+    </script>
+</body>
+</html>

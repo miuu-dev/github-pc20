@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4.2. Arrays</title>
+    <style>
+        @font-face {
+            font-family: "CenturyGothic";
+            src: url(../../fonts/CenturyGothic.otf);
+        }
+
+        body {
+            font-family: "CenturyGothic";
+        }
+    </style>
+</head>
+<body>
+    <script>
+        document.write("--- DECLARACIÓN DE ARRAYS --- <br>");
+        document.write("let a = [] -> Significa array vacío <br>");
+        document.write("let a = new Array(); -> También significa array vacío, pero es otra forma de crearlo <br><br>");
+
+
+
+        /* Para añadir valores al array, sería la siguinte composición: array[x] = valor; */
+        document.write("--- ASIGNACIÓN DE VALOR EN ARRAYS --- <br>");
+        let array1 = new Array();
+        array1[0] = "Antonio";
+        document.write("Mostrar el elemento que se encuentra en la posición 0 del array: " + "<strong>"  + array1[0] + "</strong> <br><br>");
+
+
+
+        /* Asignar valores dentro de un array directmente */
+        document.write("--- MOSTRAR CONTENIDO DE ARRAYS --- <br>");
+        let notas = new Array(7,8,9,5,3,2,4,6);
+        document.write("Ver elemento en la posición 6: <strong>" + notas[6] + "</strong> <br>");
+        document.write("Ver el array completo: <strong> " + notas + "</strong> <br><br>");
+
+
+
+        /* Asignar varios valores distintos en un array directamente */
+        document.write("--- MOSTRAR CONTENIDO DE ARRAY MÚLTIPLE --- <br>");
+        let arrayMultiple = new Array(1, 5, true, "hola", [2, 5, false]);
+        document.write("Ver elemento en la posición 4: <strong>" + arrayMultiple[4] + "</strong> <br>");
+        document.write("Ver el array completo: <strong> " + arrayMultiple + "</strong> <br><br>");
+
+
+
+        /* Al usar const en un array, los datos dentro SÍ se pueden modificar */
+        document.write("--- USAR CONST EN ARRAYS --- <br>");
+        const datos = [4.5, 6.78, 7.12, 9.123];
+        document.write("Array sin modificar: <strong> " + datos + "</strong> <br>");
+        datos[0] = 4.671;
+        document.write("Array modificado en la posición 0: <strong> " + datos + "</strong> <br><br>");
+
+
+
+        /* así le damos un nombre ADICIONAL al array principal */ 
+        document.write("--- NOMBRE ADICIONAL AL NOMBRE PRINCIPAL --- <br>")
+        const datos2 = datos;
+
+        document.write("Mostrar datos del nombre adicional: <strong>" + datos2[0] + "</strong> <br>");
+        datos2[0] = 400;
+
+        document.write("Después de modificar el segundo array vemos que aparece tanto en el primer array como en el adicional :" + " <br> Original: <strong>" +datos + "</strong> <br> Adicional: <strong>" + datos + "</strong><br><br>");
+
+
+
+        /* valores indefinidos -> podemos meter saltándonos celdas en el array, teniendo datos en la posición 0, 1 y 3 y dejar el número 2 vacío / undefined*/ 
+        document.write("--- VALORES INDEFINIDOS --- <br>")
+        let a = ["Saúl", "Rocío"];
+        document.write("Array creado: <strong>" + a + "</strong><br>")
+        
+        a[3] = "María";
+        document.write("Array sin definición en la posición 2: <strong> " + a + "</strong> <br><br>");
+
+
+
+        /* eliminar elementos de un array, esto haría que el elemento que hemos borrado se convierta en un valor undefined */ 
+        document.write("--- ELIMINAR ELEMENTOS --- <br>")
+        let dias = new Array("Lunes","Martes","Miércoles","Jueves","Viernes","Sábado","Domingo");
+        document.write("Array días: <strong>" + dias + "</strong> <br>");
+
+        delete dias[2];
+        document.write("Array días eliminando Miércoles: <strong>" + dias + "</strong> <br>")
+
+    </script>
+</body>
+</html>

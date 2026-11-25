@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla Unicode</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin: 20px auto;
+            border: 2px solid black; /* ¡Aquí le pones el borde exterior a la tabla! */
+        }
+        
+        td {
+            border: 1px solid black; /* Borde para cada celda */
+            text-align: center;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Tabla Unicode</h1>
+    <table id="unicode">
+        <script>
+            var codigo = 1; // para guardar el dato
+
+            while (codigo <= 10000) {
+                document.write("<tr>");
+
+                    for(let i = 0; i < 10; i++) {
+                        document.write("<td>" + codigo + "</td>");
+                        document.write(`<td>&#${codigo}</td>`);
+                        codigo++;
+                        if (codigo > 10000) {
+                            break;
+                        }
+                    }
+                    
+                document.write("</tr>");
+            }
+        </script>
+    </table>
+
+    
+</body>
+</html>

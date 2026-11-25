@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Documento</title>
+    <link rel="icon" href="../../img/miuuLogo.png">
+    <style>
+        @font-face {
+            font-family: 'CenturyGothic';
+            src: url('../../fonts/CenturyGothic.otf');
+        }
+
+        * {
+            font-family: 'CenturyGothic', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let objetos = {
+            x: 6,
+            y: 8,
+            z: {
+                x: 12,
+                y: 65,
+                mostrar: function() {
+                    console.log(`La x vale ${this.x} \n La y vale ${this.y}`);
+                }
+            }
+        }
+
+        for (let prop in objetos) {
+            console.log(`El atributo ${prop} vale ${objetos[prop]}`);
+        }
+    </script>
+</body>
+</html>

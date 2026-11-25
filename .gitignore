@@ -1,5 +1,12 @@
 # ==========================================
-# Entornos virtuales (incluye el de la guía)
+# Dependencias (Node / React)
+# ==========================================
+node_modules/
+/.pnp
+.pnp.js
+
+# ==========================================
+# Entornos virtuales (Python / Flask)
 # ==========================================
 envflask/
 venv/
@@ -15,9 +22,7 @@ __pycache__/
 *$py.class
 *.so
 .Python
-build/
 develop-eggs/
-dist/
 downloads/
 eggs/
 .eggs/
@@ -32,7 +37,21 @@ wheels/
 *.egg
 
 # ==========================================
-# Flask y configuración sensible / secretos
+# Builds de producción y cachés (React / Vite)
+# ==========================================
+build/
+dist/
+.next/
+out/
+.eslintcache
+.cache/
+.parcel-cache/
+.turbo/
+.vite/
+*.tsbuildinfo
+
+# ==========================================
+# Flask, variables de entorno y secretos
 # ==========================================
 instance/
 .webassets-cache
@@ -48,16 +67,28 @@ instance/
 *.sqlite3
 *.db
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
 # ==========================================
-# Editores e IDEs (VS Code)
+# Editores e IDEs (VS Code / JetBrains)
 # ==========================================
 .vscode/*
 !.vscode/settings.json
 !.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/tasks.json
 .idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
 *.swp
 *.swo
+*.sw?
 *~
 
 # ==========================================
