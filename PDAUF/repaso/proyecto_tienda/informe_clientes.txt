@@ -1,0 +1,11 @@
+INFORME GENERAL DE CLIENTES Y SALDO
+---------------------------------------------
+
+Clientes: Laura Gómez | Email: laura@gmail.com | Edad: 28 | Saldo 150.50€
+Clientes: Carlos Ruiz | Email: carlos@email.com | Edad: 35 | Saldo 200.00€
+Clientes: Marta Sáez | Email: marta@email.com | Edad: 42 | Saldo 85.75€
+Clientes: Miruna | Email: mimatei07@gmail.com | Edad: 19 | Saldo 131.13€
+
+---------------------------
+Total de clientes registrados: 4
+Saldo total acumulado: 567.38€

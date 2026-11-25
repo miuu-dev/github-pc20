@@ -1,0 +1,48 @@
+services:
+  # Servicio Web (PHP + Apache)
+  web:
+    image: php:8.2-apache
+    container_name: servidor_php
+    ports:
+      - "41063:80"    # Host: 41063 -> Contenedor: 80
+      - "44162:22"    # Host: 44162 -> Contenedor: 22 (SSH)
+    volumes:
+      - .:/var/www/html  # Tu carpeta local 'src' se sincroniza con el servidor
+    depends_on:
+      - db
+    networks:
+      - red_local
+
+  # Servicio de Base de Datos (MariaDB/MySQL)
+  db:
+    image: mariadb:10.11
+    container_name: base_datos
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: mi_base_datos
+    ports:
+      - "41064:3306"  # Host: 41064 -> Contenedor: 3306
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - red_local
+
+  # Servicio phpMyAdmin
+  phpmyadmin:
+    image: phpmyadmin:latest
+    container_name: gestor_phpmyadmin
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+    ports:
+      - "8080:80"     # Accederás a phpMyAdmin desde localhost:8080
+    depends_on:
+      - db
+    networks:
+      - red_local
+
+volumes:
+  db_data:
+
+networks:
+  red_local:

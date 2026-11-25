@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}Página de inicio{% endblock %}
+
+{% block content %}
+<h1>Bienvenido a mi sitio web</h1>
+
+<h3>Saludo</h3>
+{% if name %}
+<p>Hola {{ name | upper }} {{ content }}</p>
+<p>La fecha de hoy es: {{ date | hoy }}</p>
+{% else %}
+<p>Hola desconocido</p>
+<p>La fecha de hoy es: {{ date | hoy }}</p>
+{% endif %}
+
+<h3>Amigos</h3>
+{% if friends %}
+<ul>
+    {% for friend in friends | reverse %}
+    <li>{{ friend }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+<h3>Repetición</h3>
+<p>{{ repite("Hola ", 4) }}</p>
+
+<h3>Mis datos</h3>
+{% if data %}
+<ul>
+    <li>Nombre: {{data.name}}</li>
+    <li>Edad: {{data.age}}</li>
+    <li>Email: {{data.email}}</li>
+</ul>
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,6 @@
+Cerveza de miel;3;50
+Estofado de jabalí;5;20
+Pan de centeno;1;40
+Vino élfico;8;10
+Queso de cabra;3;15
+Cerveza con espuma;3;10

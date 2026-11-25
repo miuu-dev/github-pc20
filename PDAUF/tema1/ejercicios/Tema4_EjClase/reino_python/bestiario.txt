@@ -1,0 +1,13 @@
+Goblin;Humanoide;15;5
+Lobo huargo;Bestia;25;8
+Esqueleto;No muerto;20;6
+Troll de las cavernas;Gigante;80;40
+Arpía;Monstruo;30;12
+Dragón joven;Dragón;150;
+Basilisco;Monstruo;90;55
+Esqueleto;No muerto;20;6
+Espectro;No muerto;40;18
+
+Basilisco;Monstruo;90;55
+Esqueleto;No muerto;20;6
+Espectro;No muerto;40;18

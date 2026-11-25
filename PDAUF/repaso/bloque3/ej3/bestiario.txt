@@ -1,0 +1,4 @@
+Goblin;Humanoide;15;5 
+Lobo huargo;Bestia;25;8 
+Esqueleto;No muerto;20;6 
+Goblin;Humanoide;15;5

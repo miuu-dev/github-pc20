@@ -1,0 +1,7 @@
+Estamos aprendiendo Python
+Es un simple texto que yo he decidido poner 
+Nada más es una tontería
+-- miuu
+ 
+ 
+Presentamos una nueva línea

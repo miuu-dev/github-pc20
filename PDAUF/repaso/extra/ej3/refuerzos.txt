@@ -1,0 +1,3 @@
+Basilisco;Monstruo;90;55
+Esqueleto;No muerto;20;6
+Espectro;No muerto;40;18

@@ -1,0 +1,11 @@
+-------- PERROS --------
+1;Labrado;dorado;25.0;4;hembra;2
+2;Beagle;tricolor;12.0;3;hembra;1
+3;Pastor Alemán;negro y fuego;30.0;5;hembra;1
+4;Caniche;blanco;6.0;7;hembra;3
+5;Border Collie;blanco y negro;18.0;3;hembra;1
+6;Cocker;marrón;13.0;4;macho;0
+7;Beagle;marrón y blanco;13.0;6;macho;3
+8;Schnauzer;gris;11.0;5;macho;1
+9;Rotweiller;negro;45.0;6;macho;2
+10;Dálmata;blanco y negro;25.0;2;macho;0

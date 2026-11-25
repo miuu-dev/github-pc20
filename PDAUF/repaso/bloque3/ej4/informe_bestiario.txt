@@ -1,0 +1,9 @@
+--- MONSTRUOS ---
+
+1. Goblin - Humanoide - Vida: 15 - Oro: 5
+2. Lobo huargo - Bestia - Vida: 25 - Oro: 8
+3. Esqueleto - No muerto - Vida: 20 - Oro: 6
+
+---------------------------
+Total de criaturas: 3
+Oro total en recompensa: 19

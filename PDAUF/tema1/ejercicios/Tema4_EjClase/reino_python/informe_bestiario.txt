@@ -1,0 +1,35 @@
+INFORME DEL BESTIARIO 
+
+1. Lobo huargo Bestia
+    Vida: 25
+    Oro: 8
+2. Esqueleto No muerto
+    Vida: 20
+    Oro: 6
+3. Troll de las cavernas Gigante
+    Vida: 95
+    Oro: 45
+4. Arpía Monstruo
+    Vida: 30
+    Oro: 12
+5. Dragón joven Dragón
+    Vida: 150
+    Oro: 100
+6. Zombie No muerto
+    Vida: 20
+    Oro: 2
+7. Piglin No muerto
+    Vida: 40
+    Oro: 10
+8. Ghast Bicho
+    Vida: 20
+    Oro: 10
+9. Esqueleto Wither No muerto
+    Vida: 25
+    Oro: 10
+10. Enderman Bicho TP
+    Vida: 20
+    Oro: 20
+
+Total de criaturas: 10
+Total de oro en recompensas: 223

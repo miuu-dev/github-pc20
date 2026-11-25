@@ -1,0 +1,6 @@
+Esta linea se añadirá al final del fichero
+esta es la primera línea del texto
+añadimos otra línea de texto
+añadimos otra más para continuar añadiendo texto
+y aquí se acaba todo
+Esta linea se añadirá al final del fichero nuevamente
