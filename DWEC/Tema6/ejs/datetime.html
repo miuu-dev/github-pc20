@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedir Fecha</title>
+    <link rel="icon" href="../../img/miuuLogo.png">
+    <style>
+        @font-face {
+            font-family: 'CenturyGothic';
+            src: url('../../fonts/CenturyGothic.otf');
+        }
+
+        * {
+            font-family: 'CenturyGothic', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let dia = parseInt(prompt("Escribe el día: "))
+        let mes = parseInt(prompt("Escribe el mes: "))
+        let anio = parseInt(prompt("Escribe el año: "))
+
+        let fecha = new Date(anio, mes, dia)
+
+        document.write(fecha)
+    </script>
+</body>
+</html>
