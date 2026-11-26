@@ -1,0 +1,234 @@
+/* Diseño base proporcionado*/
+:root {
+    --fondo: #f8f3e9;
+    --tinta: #172238;
+    --oscuro: #101b35;
+    --oro: #e9a85b;
+    --claro: #fff9ef
+}
+
+* {
+    box-sizing: border-box
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+body {
+    margin: 0;
+    background: var(--fondo);
+    color: var(--tinta);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6
+}
+
+a {
+    color: inherit
+}
+
+.contenedor {
+    width: min(1100px, 92%);
+    margin: auto
+}
+
+.cabecera {
+    background: var(--oscuro);
+    color: white;
+    padding: 18px 4%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap
+}
+
+.marca {
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: 900;
+    letter-spacing: .12em
+}
+
+.marca span {
+    color: var(--oro);
+    font-size: .75rem;
+    margin-left: 8px
+}
+
+.cabecera nav {
+    display: flex;
+    gap: 22px;
+    flex-wrap: wrap
+}
+
+.cabecera nav a {
+    text-decoration: none
+}
+
+.cabecera nav a:hover {
+    text-decoration: underline
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+    align-items: center;
+    padding: 70px 0
+}
+
+.eyebrow {
+    text-transform: uppercase;
+    letter-spacing: .18em;
+    font-size: .8rem;
+    font-weight: bold;
+    color: #b4762d
+}
+
+h1 {
+    font-size: clamp(2.2rem, 4.8vw, 4.4rem);
+    line-height: 1.08;
+    margin: 12px 0
+}
+
+h2 {
+    font-size: 2.3rem;
+    line-height: 1.2;
+    margin: 6px 0 18px
+}
+
+.boton {
+    display: inline-block;
+    background: var(--oscuro);
+    color: white;
+    text-decoration: none;
+    padding: 12px 22px;
+    border-radius: 4px;
+    margin-top: 12px;
+    cursor: pointer;
+    border: 0
+}
+
+.boton:hover {
+    background: #314b70
+}
+
+.seccion {
+    padding: 70px 0
+}
+
+.seccion-oscura {
+    background: var(--oscuro);
+    color: white
+}
+
+.seccion-oscura .eyebrow {
+    color: var(--oro)
+}
+
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-top: 30px
+}
+
+.tarjeta {
+    background: white;
+    border-radius: 9px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px #1112
+}
+
+#huecoPortada img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: 0 8px 24px #1112
+}
+
+.tarjeta figcaption {
+    padding: 8px 18px 0;
+    font-size: .8rem;
+    color: #786d60
+}
+
+#listaCreditos ul {
+    padding-left: 20px
+}
+
+#listaCreditos a {
+    color: var(--oro)
+}
+
+.tarjeta-cuerpo {
+    padding: 18px
+}
+
+.tarjeta figure {
+    margin: 0;
+}
+
+.tarjeta figure img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+.tarjeta h3 {
+    margin: 0
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+
+.panel {
+    border: 1px solid #b8a98f55;
+    border-radius: 8px;
+    padding: 25px;
+    margin-top: 25px
+}
+
+.pie {
+    background: #080f20;
+    color: #e9e4dd;
+    padding: 30px 0
+}
+
+.pie p {
+    margin: 7px 0
+}
+
+button,
+input,
+select {
+    font: inherit
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible {
+    outline: 3px solid var(--oro);
+    outline-offset: 3px
+}
+
+@media(max-width:750px) {
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 40px 0
+    }
+
+    .tarjetas {
+        grid-template-columns: 1fr
+    }
+
+    .seccion {
+        padding: 45px 0
+    }
+}
